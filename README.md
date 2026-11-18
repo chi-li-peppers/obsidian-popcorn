@@ -2,7 +2,7 @@
 
 A glassy Obsidian theme with floating panels and color palettes inspired by popular films and TV series. Works on desktop and mobile.
 
-Status: work in progress.
+**Status:** work in progress — the stylesheet is a placeholder while the design is being built out.
 
 ## Installation
 
@@ -18,10 +18,6 @@ Status: work in progress.
 
 - `manifest.json` — theme metadata Obsidian reads on startup.
 - `theme.css` — the theme itself: glass panels, film-inspired palettes.
-
-## Status
-
-Early stage: the stylesheet is a placeholder while the design is being built out.
 
 ## License
 

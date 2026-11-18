@@ -1,0 +1,15 @@
+name: Palette request
+description: Suggest a film or series for a new palette
+labels: [palette]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Film or series
+    validations:
+      required: true
+  - type: textarea
+    id: colors
+    attributes:
+      label: Which colors make it recognizable?
+      description: Describe the look, or link a still you have the right to share.

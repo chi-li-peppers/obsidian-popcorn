@@ -1,0 +1,1036 @@
+[
+ {
+  "slug": "arrakis",
+  "name": "Arrakis",
+  "film": "Dune",
+  "dark": {
+   "bg": "#1a120b",
+   "panel": "#292119",
+   "eff": "#241c14",
+   "text": "#edeae8",
+   "muted": "#bab2ab",
+   "faint": "#8a7f75",
+   "a": "#e8a24a",
+   "b": "#c9733a",
+   "glow_a": "#e8a24a",
+   "glow_b": "#c9733a",
+   "on_a": "#111111",
+   "c": [
+    "#e8a24a",
+    "#c9733a",
+    "#d88a42",
+    "#4ae89f",
+    "#4a90e8",
+    "#e84adf"
+   ]
+  },
+  "light": {
+   "bg": "#f4efe9",
+   "panel": "#ffffff",
+   "eff": "#fbf9f7",
+   "text": "#292219",
+   "muted": "#6d6255",
+   "faint": "#958d83",
+   "a": "#a36415",
+   "b": "#c9733a",
+   "glow_a": "#ebb065",
+   "glow_b": "#d18858",
+   "on_a": "#ffffff",
+   "c": [
+    "#a36415",
+    "#c9733a",
+    "#b66c28",
+    "#15a361",
+    "#1554a3",
+    "#a3159b"
+   ]
+  }
+ },
+ {
+  "slug": "upside-down",
+  "name": "Upside Down",
+  "film": "Stranger Things",
+  "dark": {
+   "bg": "#0a0d1a",
+   "panel": "#181c2a",
+   "eff": "#131724",
+   "text": "#e8e9ed",
+   "muted": "#abaeba",
+   "faint": "#75798a",
+   "a": "#e5484d",
+   "b": "#4a6cff",
+   "glow_a": "#e5484d",
+   "glow_b": "#4a6cff",
+   "on_a": "#111111",
+   "c": [
+    "#e5484d",
+    "#4a6cff",
+    "#985aa6",
+    "#50e548",
+    "#48e5e0",
+    "#9248e5"
+   ]
+  },
+  "light": {
+   "bg": "#f4e9e9",
+   "panel": "#ffffff",
+   "eff": "#fbf7f7",
+   "text": "#291919",
+   "muted": "#6d5556",
+   "faint": "#958384",
+   "a": "#dd1f25",
+   "b": "#4a6cff",
+   "glow_a": "#e96368",
+   "glow_b": "#6582ff",
+   "on_a": "#ffffff",
+   "c": [
+    "#dd1f25",
+    "#4a6cff",
+    "#944692",
+    "#1ea217",
+    "#169d98",
+    "#781fdd"
+   ]
+  }
+ },
+ {
+  "slug": "digital-rain",
+  "name": "Digital Rain",
+  "film": "The Matrix",
+  "dark": {
+   "bg": "#020a04",
+   "panel": "#162c1c",
+   "eff": "#0f2014",
+   "text": "#e8ede9",
+   "muted": "#abbaaf",
+   "faint": "#758a7a",
+   "a": "#39ff6a",
+   "b": "#0fa24a",
+   "glow_a": "#39ff6a",
+   "glow_b": "#0fa24a",
+   "on_a": "#111111",
+   "c": [
+    "#39ff6a",
+    "#0fa24a",
+    "#24d05a",
+    "#6b3fff",
+    "#ff39ce",
+    "#ffcd39"
+   ]
+  },
+  "light": {
+   "bg": "#e8f4eb",
+   "panel": "#ffffff",
+   "eff": "#f7fbf8",
+   "text": "#19291d",
+   "muted": "#556d5b",
+   "faint": "#839588",
+   "a": "#008020",
+   "b": "#0fa24a",
+   "glow_a": "#57ff80",
+   "glow_b": "#33b065",
+   "on_a": "#ffffff",
+   "c": [
+    "#008020",
+    "#0fa24a",
+    "#089135",
+    "#1d0080",
+    "#800060",
+    "#806000"
+   ]
+  }
+ },
+ {
+  "slug": "off-world",
+  "name": "Off-World",
+  "film": "Blade Runner 2049",
+  "dark": {
+   "bg": "#160a04",
+   "panel": "#2c1e16",
+   "eff": "#241710",
+   "text": "#edeae8",
+   "muted": "#bab0ab",
+   "faint": "#8a7c75",
+   "a": "#ff8a2a",
+   "b": "#ff3d7f",
+   "glow_a": "#ff8a2a",
+   "glow_b": "#ff3d7f",
+   "on_a": "#111111",
+   "c": [
+    "#ff8a2a",
+    "#ff3d7f",
+    "#ff6454",
+    "#2aff86",
+    "#2a9fff",
+    "#f42aff"
+   ]
+  },
+  "light": {
+   "bg": "#f4eee8",
+   "panel": "#ffffff",
+   "eff": "#fbf9f7",
+   "text": "#292019",
+   "muted": "#6d6055",
+   "faint": "#958b83",
+   "a": "#bb5400",
+   "b": "#ff3d7f",
+   "glow_a": "#ff9c4a",
+   "glow_b": "#ff5a92",
+   "on_a": "#ffffff",
+   "c": [
+    "#bb5400",
+    "#ff3d7f",
+    "#dd4840",
+    "#00a346",
+    "#0067bb",
+    "#b200bb"
+   ]
+  }
+ },
+ {
+  "slug": "macrodata",
+  "name": "Macrodata",
+  "film": "Severance",
+  "dark": {
+   "bg": "#0a1416",
+   "panel": "#1a2629",
+   "eff": "#142022",
+   "text": "#e8eced",
+   "muted": "#abb8ba",
+   "faint": "#75868a",
+   "a": "#5fd3c8",
+   "b": "#9ab8b3",
+   "glow_a": "#5fd3c8",
+   "glow_b": "#9ab8b3",
+   "on_a": "#111111",
+   "c": [
+    "#5fd3c8",
+    "#9ab8b3",
+    "#7cc5be",
+    "#c65fd3",
+    "#d35f6a",
+    "#a4d35f"
+   ]
+  },
+  "light": {
+   "bg": "#eaf3f2",
+   "panel": "#ffffff",
+   "eff": "#f8fbfa",
+   "text": "#192928",
+   "muted": "#556d6a",
+   "faint": "#839594",
+   "a": "#227d74",
+   "b": "#6f9a93",
+   "glow_a": "#77dad0",
+   "glow_b": "#a9c3be",
+   "on_a": "#ffffff",
+   "c": [
+    "#227d74",
+    "#6f9a93",
+    "#488b84",
+    "#72227d",
+    "#7d222b",
+    "#587d22"
+   ]
+  }
+ },
+ {
+  "slug": "black-lodge",
+  "name": "Black Lodge",
+  "film": "Twin Peaks",
+  "dark": {
+   "bg": "#140405",
+   "panel": "#2c1618",
+   "eff": "#241011",
+   "text": "#ede8e8",
+   "muted": "#baabac",
+   "faint": "#8a7577",
+   "a": "#e34a4f",
+   "b": "#e8e2d6",
+   "glow_a": "#e0353a",
+   "glow_b": "#e8e2d6",
+   "on_a": "#111111",
+   "c": [
+    "#e34a4f",
+    "#e8e2d6",
+    "#e59692",
+    "#52e34a",
+    "#4ae3de",
+    "#914ae3"
+   ]
+  },
+  "light": {
+   "bg": "#f4e9e9",
+   "panel": "#ffffff",
+   "eff": "#fbf7f7",
+   "text": "#291919",
+   "muted": "#6d5556",
+   "faint": "#958384",
+   "a": "#db2227",
+   "b": "#a48c5c",
+   "glow_a": "#e55358",
+   "glow_b": "#ebe6dc",
+   "on_a": "#ffffff",
+   "c": [
+    "#db2227",
+    "#a48c5c",
+    "#c05742",
+    "#21a61a",
+    "#189b98",
+    "#7922db"
+   ]
+  }
+ },
+ {
+  "slug": "night-drive",
+  "name": "Night Drive",
+  "film": "Drive",
+  "dark": {
+   "bg": "#0b0a18",
+   "panel": "#1a1929",
+   "eff": "#151423",
+   "text": "#e9e8ed",
+   "muted": "#acabba",
+   "faint": "#77758a",
+   "a": "#ff7ac6",
+   "b": "#7b8cff",
+   "glow_a": "#ff7ac6",
+   "glow_b": "#7b8cff",
+   "on_a": "#111111",
+   "c": [
+    "#ff7ac6",
+    "#7b8cff",
+    "#bd83e2",
+    "#c9ff7a",
+    "#7affb3",
+    "#7a84ff"
+   ]
+  },
+  "light": {
+   "bg": "#f4e8ef",
+   "panel": "#ffffff",
+   "eff": "#fbf7f9",
+   "text": "#291922",
+   "muted": "#6d5563",
+   "faint": "#95838e",
+   "a": "#da007d",
+   "b": "#6f81ff",
+   "glow_a": "#ff8ecf",
+   "glow_b": "#8f9dff",
+   "on_a": "#ffffff",
+   "c": [
+    "#da007d",
+    "#6f81ff",
+    "#a440be",
+    "#5d9d00",
+    "#00a346",
+    "#0010da"
+   ]
+  }
+ },
+ {
+  "slug": "gargantua",
+  "name": "Gargantua",
+  "film": "Interstellar",
+  "dark": {
+   "bg": "#07070a",
+   "panel": "#1e1e25",
+   "eff": "#16161c",
+   "text": "#e8e8ed",
+   "muted": "#ababba",
+   "faint": "#75758a",
+   "a": "#f2b84b",
+   "b": "#ff8c42",
+   "glow_a": "#f2b84b",
+   "glow_b": "#ff8c42",
+   "on_a": "#111111",
+   "c": [
+    "#f2b84b",
+    "#ff8c42",
+    "#f8a246",
+    "#4bf2b5",
+    "#4b85f2",
+    "#f24bd9"
+   ]
+  },
+  "light": {
+   "bg": "#f4f0e8",
+   "panel": "#ffffff",
+   "eff": "#fbfaf7",
+   "text": "#292419",
+   "muted": "#6d6455",
+   "faint": "#958f83",
+   "a": "#99680b",
+   "b": "#f86100",
+   "glow_a": "#f4c366",
+   "glow_b": "#ff9d5e",
+   "on_a": "#ffffff",
+   "c": [
+    "#99680b",
+    "#f86100",
+    "#c86406",
+    "#0b9965",
+    "#0b3c99",
+    "#990b83"
+   ]
+  }
+ },
+ {
+  "slug": "trinity",
+  "name": "Trinity",
+  "film": "Oppenheimer",
+  "dark": {
+   "bg": "#120a06",
+   "panel": "#2b1e17",
+   "eff": "#221711",
+   "text": "#edeae8",
+   "muted": "#bab0ab",
+   "faint": "#8a7c75",
+   "a": "#ff6a2a",
+   "b": "#ffc15e",
+   "glow_a": "#ff6a2a",
+   "glow_b": "#ffc15e",
+   "on_a": "#111111",
+   "c": [
+    "#ff6a2a",
+    "#ffc15e",
+    "#ff9644",
+    "#2aff66",
+    "#2abfff",
+    "#d42aff"
+   ]
+  },
+  "light": {
+   "bg": "#f4ece8",
+   "panel": "#ffffff",
+   "eff": "#fbf8f7",
+   "text": "#291e19",
+   "muted": "#6d5c55",
+   "faint": "#958983",
+   "a": "#cd3e00",
+   "b": "#ca7c00",
+   "glow_a": "#ff804a",
+   "glow_b": "#ffca76",
+   "on_a": "#ffffff",
+   "c": [
+    "#cd3e00",
+    "#ca7c00",
+    "#cc5d00",
+    "#00a22e",
+    "#008fcd",
+    "#a500cd"
+   ]
+  }
+ },
+ {
+  "slug": "wasteland",
+  "name": "Wasteland",
+  "film": "Mad Max: Fury Road",
+  "dark": {
+   "bg": "#150c08",
+   "panel": "#2a1e18",
+   "eff": "#231812",
+   "text": "#edeae8",
+   "muted": "#bab0ab",
+   "faint": "#8a7c75",
+   "a": "#ff7b2e",
+   "b": "#2fb8c4",
+   "glow_a": "#ff7b2e",
+   "glow_b": "#2fb8c4",
+   "on_a": "#111111",
+   "c": [
+    "#ff7b2e",
+    "#2fb8c4",
+    "#979a79",
+    "#2eff77",
+    "#2eb2ff",
+    "#e32eff"
+   ]
+  },
+  "light": {
+   "bg": "#f4ede8",
+   "panel": "#ffffff",
+   "eff": "#fbf9f7",
+   "text": "#291f19",
+   "muted": "#6d5e55",
+   "faint": "#958a83",
+   "a": "#c54900",
+   "b": "#289ca6",
+   "glow_a": "#ff8f4d",
+   "glow_b": "#4ec3cd",
+   "on_a": "#ffffff",
+   "c": [
+    "#c54900",
+    "#289ca6",
+    "#767253",
+    "#00a63a",
+    "#007cc5",
+    "#ab00c5"
+   ]
+  }
+ },
+ {
+  "slug": "cordyceps",
+  "name": "Cordyceps",
+  "film": "The Last of Us",
+  "dark": {
+   "bg": "#0c120c",
+   "panel": "#1d251d",
+   "eff": "#171e17",
+   "text": "#e8ede8",
+   "muted": "#abbaab",
+   "faint": "#758a75",
+   "a": "#8bbf5a",
+   "b": "#e0a458",
+   "glow_a": "#8bbf5a",
+   "glow_b": "#e0a458",
+   "on_a": "#111111",
+   "c": [
+    "#8bbf5a",
+    "#e0a458",
+    "#b5b259",
+    "#598dc0",
+    "#8e59c0",
+    "#c05b59"
+   ]
+  },
+  "light": {
+   "bg": "#eef2eb",
+   "panel": "#ffffff",
+   "eff": "#f9faf8",
+   "text": "#212919",
+   "muted": "#616d55",
+   "faint": "#8c9583",
+   "a": "#547b30",
+   "b": "#c98125",
+   "glow_a": "#9cc973",
+   "glow_b": "#e5b271",
+   "on_a": "#ffffff",
+   "c": [
+    "#547b30",
+    "#c98125",
+    "#8e7e2b",
+    "#2f557c",
+    "#572f7c",
+    "#7c312f"
+   ]
+  }
+ },
+ {
+  "slug": "the-down-deep",
+  "name": "The Down Deep",
+  "film": "Silo",
+  "dark": {
+   "bg": "#0f0f0d",
+   "panel": "#232320",
+   "eff": "#1c1c19",
+   "text": "#edede8",
+   "muted": "#babaab",
+   "faint": "#8a8a75",
+   "a": "#f2c230",
+   "b": "#8f9a8a",
+   "glow_a": "#f2c230",
+   "glow_b": "#8f9a8a",
+   "on_a": "#111111",
+   "c": [
+    "#f2c230",
+    "#8f9a8a",
+    "#c0ae5d",
+    "#30f2be",
+    "#3060f2",
+    "#f230c1"
+   ]
+  },
+  "light": {
+   "bg": "#f4f1e8",
+   "panel": "#ffffff",
+   "eff": "#fbfaf7",
+   "text": "#292519",
+   "muted": "#6d6755",
+   "faint": "#959183",
+   "a": "#8c6c09",
+   "b": "#899483",
+   "glow_a": "#f4cb4f",
+   "glow_b": "#a0a99c",
+   "on_a": "#ffffff",
+   "c": [
+    "#8c6c09",
+    "#899483",
+    "#8b8046",
+    "#098c69",
+    "#09298c",
+    "#8c096a"
+   ]
+  }
+ },
+ {
+  "slug": "terminus",
+  "name": "Terminus",
+  "film": "Foundation",
+  "dark": {
+   "bg": "#08091a",
+   "panel": "#17182c",
+   "eff": "#121326",
+   "text": "#e8e8ed",
+   "muted": "#abacba",
+   "faint": "#75768a",
+   "a": "#d8b45a",
+   "b": "#6aa6ff",
+   "glow_a": "#d8b45a",
+   "glow_b": "#6aa6ff",
+   "on_a": "#111111",
+   "c": [
+    "#d8b45a",
+    "#6aa6ff",
+    "#a1adac",
+    "#5ad8b1",
+    "#5a7ed8",
+    "#d85abd"
+   ]
+  },
+  "light": {
+   "bg": "#f3f0ea",
+   "panel": "#ffffff",
+   "eff": "#fbfaf8",
+   "text": "#292519",
+   "muted": "#6d6655",
+   "faint": "#959083",
+   "a": "#8b6c21",
+   "b": "#4590ff",
+   "glow_a": "#debf73",
+   "glow_b": "#80b3ff",
+   "on_a": "#ffffff",
+   "c": [
+    "#8b6c21",
+    "#4590ff",
+    "#687e90",
+    "#218b6a",
+    "#21408b",
+    "#8b2175"
+   ]
+  }
+ },
+ {
+  "slug": "redwood",
+  "name": "Redwood",
+  "film": "Sons of Anarchy",
+  "dark": {
+   "bg": "#120c0b",
+   "panel": "#261e1c",
+   "eff": "#1f1816",
+   "text": "#ede9e8",
+   "muted": "#baadab",
+   "faint": "#8a7875",
+   "a": "#dc574f",
+   "b": "#b8b8b8",
+   "glow_a": "#d63a30",
+   "glow_b": "#b8b8b8",
+   "on_a": "#111111",
+   "c": [
+    "#dc574f",
+    "#b8b8b8",
+    "#ca8884",
+    "#4fdc54",
+    "#4fd4dc",
+    "#9d4fdc"
+   ]
+  },
+  "light": {
+   "bg": "#f3eae9",
+   "panel": "#ffffff",
+   "eff": "#fbf8f7",
+   "text": "#291a19",
+   "muted": "#6d5755",
+   "faint": "#958483",
+   "a": "#d5352b",
+   "b": "#909090",
+   "glow_a": "#dc584f",
+   "glow_b": "#c3c3c3",
+   "on_a": "#ffffff",
+   "c": [
+    "#d5352b",
+    "#909090",
+    "#b2625e",
+    "#20a326",
+    "#209ba3",
+    "#8a2bd5"
+   ]
+  }
+ },
+ {
+  "slug": "dragonstone",
+  "name": "Dragonstone",
+  "film": "House of the Dragon",
+  "dark": {
+   "bg": "#0c0a0a",
+   "panel": "#231f1f",
+   "eff": "#1b1818",
+   "text": "#ede8e8",
+   "muted": "#baabab",
+   "faint": "#8a7575",
+   "a": "#e34f3a",
+   "b": "#c9962e",
+   "glow_a": "#e2452f",
+   "glow_b": "#c9962e",
+   "on_a": "#111111",
+   "c": [
+    "#e34f3a",
+    "#c9962e",
+    "#d67234",
+    "#3ae34c",
+    "#3acee3",
+    "#a33ae3"
+   ]
+  },
+  "light": {
+   "bg": "#f4eae9",
+   "panel": "#ffffff",
+   "eff": "#fbf8f7",
+   "text": "#291b19",
+   "muted": "#6d5855",
+   "faint": "#958583",
+   "a": "#d5341e",
+   "b": "#b58729",
+   "glow_a": "#e6614e",
+   "glow_b": "#d1a64d",
+   "on_a": "#ffffff",
+   "c": [
+    "#d5341e",
+    "#b58729",
+    "#c55e24",
+    "#17a525",
+    "#199daf",
+    "#901ed5"
+   ]
+  }
+ },
+ {
+  "slug": "nine-nine",
+  "name": "Nine-Nine",
+  "film": "Brooklyn Nine-Nine",
+  "dark": {
+   "bg": "#0a1020",
+   "panel": "#171c2c",
+   "eff": "#121828",
+   "text": "#e8e9ed",
+   "muted": "#abafba",
+   "faint": "#757b8a",
+   "a": "#4f86ff",
+   "b": "#ffd23f",
+   "glow_a": "#4f86ff",
+   "glow_b": "#ffd23f",
+   "on_a": "#111111",
+   "c": [
+    "#4f86ff",
+    "#ffd23f",
+    "#a7ac9f",
+    "#ff4f8a",
+    "#ffc84f",
+    "#4fff70"
+   ]
+  },
+  "light": {
+   "bg": "#e8ecf4",
+   "panel": "#ffffff",
+   "eff": "#f7f8fb",
+   "text": "#191e29",
+   "muted": "#555d6d",
+   "faint": "#838995",
+   "a": "#1e64ff",
+   "b": "#b18800",
+   "glow_a": "#6998ff",
+   "glow_b": "#ffd95c",
+   "on_a": "#ffffff",
+   "c": [
+    "#1e64ff",
+    "#b18800",
+    "#687680",
+    "#ff1e68",
+    "#bb8100",
+    "#00a31e"
+   ]
+  }
+ },
+ {
+  "slug": "rolling-stone",
+  "name": "Rolling Stone",
+  "film": "Reacher",
+  "dark": {
+   "bg": "#12110f",
+   "panel": "#23221f",
+   "eff": "#1d1c19",
+   "text": "#edebe8",
+   "muted": "#bab5ab",
+   "faint": "#8a8375",
+   "a": "#c9a46a",
+   "b": "#7f93a3",
+   "glow_a": "#c9a46a",
+   "glow_b": "#7f93a3",
+   "on_a": "#111111",
+   "c": [
+    "#c9a46a",
+    "#7f93a3",
+    "#a49c86",
+    "#6ac9a2",
+    "#6a8fc9",
+    "#c96abe"
+   ]
+  },
+  "light": {
+   "bg": "#f2efeb",
+   "panel": "#ffffff",
+   "eff": "#faf9f8",
+   "text": "#292319",
+   "muted": "#6d6355",
+   "faint": "#958e83",
+   "a": "#906d34",
+   "b": "#7f93a3",
+   "glow_a": "#d1b280",
+   "glow_b": "#92a3b1",
+   "on_a": "#ffffff",
+   "c": [
+    "#906d34",
+    "#7f93a3",
+    "#88806b",
+    "#34906b",
+    "#345790",
+    "#903485"
+   ]
+  }
+ },
+ {
+  "slug": "grand-pastel",
+  "name": "Grand Pastel",
+  "film": "The Grand Budapest Hotel",
+  "dark": {
+   "bg": "#1a1218",
+   "panel": "#251e23",
+   "eff": "#211a1f",
+   "text": "#ede8ec",
+   "muted": "#baabb6",
+   "faint": "#8a7585",
+   "a": "#f19bb6",
+   "b": "#b9a2e6",
+   "glow_a": "#f19bb6",
+   "glow_b": "#b9a2e6",
+   "on_a": "#111111",
+   "c": [
+    "#f19bb6",
+    "#b9a2e6",
+    "#d59ece",
+    "#b8f19b",
+    "#9bf1d6",
+    "#ab9bf1"
+   ]
+  },
+  "light": {
+   "bg": "#f4e9ec",
+   "panel": "#ffffff",
+   "eff": "#fbf7f8",
+   "text": "#29191e",
+   "muted": "#6d555d",
+   "faint": "#958389",
+   "a": "#db1f5a",
+   "b": "#9c7bdc",
+   "glow_a": "#f3aac1",
+   "glow_b": "#c3b0ea",
+   "on_a": "#ffffff",
+   "c": [
+    "#db1f5a",
+    "#9c7bdc",
+    "#bc4d9b",
+    "#45a017",
+    "#17a075",
+    "#421fdb"
+   ]
+  }
+ },
+ {
+  "slug": "plastic-pink",
+  "name": "Plastic Pink",
+  "film": "Barbie",
+  "dark": {
+   "bg": "#1a0a14",
+   "panel": "#2a1823",
+   "eff": "#24131e",
+   "text": "#ede8eb",
+   "muted": "#baabb4",
+   "faint": "#8a7582",
+   "a": "#ff3fa4",
+   "b": "#ff9ad5",
+   "glow_a": "#ff3fa4",
+   "glow_b": "#ff9ad5",
+   "on_a": "#111111",
+   "c": [
+    "#ff3fa4",
+    "#ff9ad5",
+    "#ff6cbc",
+    "#a8ff3f",
+    "#3fff9a",
+    "#454aff"
+   ]
+  },
+  "light": {
+   "bg": "#f4e8ef",
+   "panel": "#ffffff",
+   "eff": "#fbf7f9",
+   "text": "#291922",
+   "muted": "#6d5562",
+   "faint": "#95838d",
+   "a": "#dc0074",
+   "b": "#ff3eaf",
+   "glow_a": "#ff5cb2",
+   "glow_b": "#ffa9db",
+   "on_a": "#ffffff",
+   "c": [
+    "#dc0074",
+    "#ff3eaf",
+    "#ee1f92",
+    "#579f00",
+    "#00a54e",
+    "#0006dc"
+   ]
+  }
+ },
+ {
+  "slug": "nevermore",
+  "name": "Nevermore",
+  "film": "Wednesday",
+  "dark": {
+   "bg": "#0a0a0b",
+   "panel": "#202022",
+   "eff": "#18181a",
+   "text": "#e8e8ed",
+   "muted": "#ababba",
+   "faint": "#75758a",
+   "a": "#a98be0",
+   "b": "#e6e6e6",
+   "glow_a": "#a98be0",
+   "glow_b": "#e6e6e6",
+   "on_a": "#111111",
+   "c": [
+    "#a98be0",
+    "#e6e6e6",
+    "#c8b8e3",
+    "#e0a78b",
+    "#c2e08b",
+    "#8be0d4"
+   ]
+  },
+  "light": {
+   "bg": "#edeaf3",
+   "panel": "#ffffff",
+   "eff": "#f9f8fb",
+   "text": "#1f1929",
+   "muted": "#5d556d",
+   "faint": "#8a8395",
+   "a": "#8256d2",
+   "b": "#909090",
+   "glow_a": "#b69ce5",
+   "glow_b": "#eaeaea",
+   "on_a": "#ffffff",
+   "c": [
+    "#8256d2",
+    "#909090",
+    "#8973b1",
+    "#cf794c",
+    "#749c2a",
+    "#2ba190"
+   ]
+  }
+ },
+ {
+  "slug": "glitter",
+  "name": "Glitter",
+  "film": "Euphoria",
+  "dark": {
+   "bg": "#120a1e",
+   "panel": "#1f172b",
+   "eff": "#1a1226",
+   "text": "#eae8ed",
+   "muted": "#b1abba",
+   "faint": "#7d758a",
+   "a": "#b45cff",
+   "b": "#4de3ff",
+   "glow_a": "#b45cff",
+   "glow_b": "#4de3ff",
+   "on_a": "#111111",
+   "c": [
+    "#b45cff",
+    "#4de3ff",
+    "#80a0ff",
+    "#ffb15c",
+    "#a7ff5c",
+    "#5cf9ff"
+   ]
+  },
+  "light": {
+   "bg": "#efe8f4",
+   "panel": "#ffffff",
+   "eff": "#f9f7fb",
+   "text": "#221929",
+   "muted": "#62556d",
+   "faint": "#8d8395",
+   "a": "#a031ff",
+   "b": "#009cb9",
+   "glow_a": "#bf74ff",
+   "glow_b": "#68e7ff",
+   "on_a": "#ffffff",
+   "c": [
+    "#a031ff",
+    "#009cb9",
+    "#5066dc",
+    "#da7100",
+    "#4ba300",
+    "#009da3"
+   ]
+  }
+ },
+ {
+  "slug": "yes-chef",
+  "name": "Yes Chef",
+  "film": "The Bear",
+  "dark": {
+   "bg": "#0d1216",
+   "panel": "#1c2226",
+   "eff": "#171c20",
+   "text": "#e8ebed",
+   "muted": "#abb3ba",
+   "faint": "#75818a",
+   "a": "#4a90d9",
+   "b": "#c8cfd6",
+   "glow_a": "#4a90d9",
+   "glow_b": "#c8cfd6",
+   "on_a": "#111111",
+   "c": [
+    "#4a90d9",
+    "#c8cfd6",
+    "#89b0d8",
+    "#d94a93",
+    "#d9934a",
+    "#4ad94c"
+   ]
+  },
+  "light": {
+   "bg": "#eaeef3",
+   "panel": "#ffffff",
+   "eff": "#f8f9fb",
+   "text": "#192129",
+   "muted": "#55616d",
+   "faint": "#838c95",
+   "a": "#2974c3",
+   "b": "#8292a2",
+   "glow_a": "#65a1df",
+   "glow_b": "#d0d6dc",
+   "on_a": "#ffffff",
+   "c": [
+    "#2974c3",
+    "#8292a2",
+    "#5683b2",
+    "#c32977",
+    "#c37829",
+    "#23a524"
+   ]
+  }
+ }
+]

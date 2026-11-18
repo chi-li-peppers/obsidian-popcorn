@@ -1,0 +1,22 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: theme.css is up to date with src/
+        run: |
+          cp theme.css /tmp/theme.committed.css
+          python3 src/gen.py
+          diff -q theme.css /tmp/theme.committed.css || (echo "Run python3 src/gen.py and commit theme.css" && exit 1)
+      - name: Manifest check
+        run: jq -e '.name and .version and .minAppVersion and .author' manifest.json

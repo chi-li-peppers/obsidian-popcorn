@@ -1,0 +1,473 @@
+
+/* =====================================================================
+   Defaults (overridden by Style Settings)
+   ===================================================================== */
+body {
+  --pc-glass: 0.62;
+  --pc-blur: 24px;
+  --pc-blur-scale: 1;
+  --pc-heading-scale: 1;
+  --pc-gap: 10px;
+  --pc-radius: 18px;
+  --file-line-width: 720px;
+}
+body.is-mobile { --pc-blur-scale: 0.6; --pc-gap: 0px; }
+
+/* =====================================================================
+   Accent mapping: applies to the app and to notes with their own palette
+   ===================================================================== */
+body.theme-dark, body.theme-light,
+.markdown-preview-view[class*=" pc-"],
+.markdown-source-view[class*=" pc-"] {
+  --text-normal: var(--pc-text);
+  --text-muted: var(--pc-muted);
+  --text-faint: var(--pc-faint);
+  --text-accent: var(--pc-a);
+  --text-accent-hover: var(--pc-b);
+  --text-on-accent: var(--pc-on-a);
+  --text-selection: rgba(var(--pc-a-rgb), 0.28);
+  --text-highlight-bg: rgba(var(--pc-b-rgb), 0.32);
+  --interactive-accent: var(--pc-a);
+  --interactive-accent-hover: color-mix(in srgb, var(--pc-a) 82%, var(--pc-text));
+  --link-color: var(--pc-a);
+  --link-color-hover: var(--pc-b);
+  --link-external-color: var(--pc-b);
+  --link-external-color-hover: var(--pc-a);
+  --link-unresolved-color: var(--pc-muted);
+  --tag-color: var(--pc-a);
+  --tag-color-hover: var(--pc-a);
+  --tag-background: rgba(var(--pc-a-rgb), 0.15);
+  --tag-background-hover: rgba(var(--pc-a-rgb), 0.24);
+  --tag-border-width: 0px;
+  --tag-radius: 999px;
+  --tag-padding-x: 0.65em;
+  --tag-padding-y: 0.2em;
+  --checkbox-color: var(--pc-a);
+  --checkbox-color-hover: var(--pc-b);
+  --checkbox-border-color: var(--pc-muted);
+  --checkbox-radius: 6px;
+  --checklist-done-color: var(--pc-faint);
+  --blockquote-border-color: var(--pc-a);
+  --blockquote-border-thickness: 3px;
+  --hr-color: rgba(var(--pc-text-rgb), 0.12);
+  --code-normal: var(--pc-text);
+  --code-background: rgba(var(--pc-text-rgb), 0.06);
+  --inline-title-color: var(--pc-text);
+  --h1-color: var(--pc-text);
+  --h2-color: var(--pc-text);
+  --h3-color: var(--pc-a);
+  --h4-color: var(--pc-b);
+  --h5-color: var(--pc-muted);
+  --h6-color: var(--pc-muted);
+  --list-marker-color: var(--pc-a);
+  --list-marker-color-collapsed: var(--pc-b);
+  --table-header-color: var(--pc-text);
+  --table-border-color: rgba(var(--pc-text-rgb), 0.12);
+  --table-row-alt-background: rgba(var(--pc-text-rgb), 0.03);
+  --callout-radius: 16px;
+}
+
+/* =====================================================================
+   Surfaces
+   ===================================================================== */
+body.theme-dark, body.theme-light {
+  --font-text-theme: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-interface-theme: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --background-primary: var(--pc-panel);
+  --background-primary-alt: color-mix(in srgb, var(--pc-panel) 92%, var(--pc-text));
+  --background-secondary: var(--pc-panel);
+  --background-secondary-alt: color-mix(in srgb, var(--pc-panel) 90%, var(--pc-text));
+  --background-modifier-border: rgba(var(--pc-text-rgb), 0.12);
+  --background-modifier-border-hover: rgba(var(--pc-text-rgb), 0.2);
+  --background-modifier-border-focus: var(--pc-a);
+  --background-modifier-hover: rgba(var(--pc-text-rgb), 0.07);
+  --background-modifier-active-hover: rgba(var(--pc-a-rgb), 0.16);
+  --background-modifier-form-field: rgba(var(--pc-text-rgb), 0.06);
+  --divider-color: transparent;
+  --titlebar-background: transparent;
+  --titlebar-background-focused: transparent;
+  --tab-container-background: transparent;
+  --ribbon-background: transparent;
+  --ribbon-background-collapsed: transparent;
+  --nav-item-background-active: rgba(var(--pc-a-rgb), 0.16);
+  --nav-item-color-active: var(--pc-text);
+  --nav-item-radius: 10px;
+  --radius-s: 8px;
+  --radius-m: 12px;
+  --radius-l: 16px;
+  --radius-xl: 20px;
+  --modal-radius: 22px;
+  --menu-radius: 14px;
+  --input-radius: 10px;
+  --button-radius: 10px;
+  --h1-size: calc(2em * var(--pc-heading-scale));
+  --h2-size: calc(1.5em * var(--pc-heading-scale));
+  --h3-size: calc(1.25em * var(--pc-heading-scale));
+  --inline-title-size: calc(2.4em * var(--pc-heading-scale));
+  --inline-title-weight: 750;
+  --h1-weight: 720;
+  --h2-weight: 680;
+  --h3-weight: 650;
+  --canvas-background: transparent;
+  --canvas-dot-pattern: rgba(var(--pc-text-rgb), 0.16);
+  --canvas-color-1: var(--pc-c1-rgb);
+  --canvas-color-2: var(--pc-c2-rgb);
+  --canvas-color-3: var(--pc-c3-rgb);
+  --canvas-color-4: var(--pc-c4-rgb);
+  --canvas-color-5: var(--pc-c5-rgb);
+  --canvas-color-6: var(--pc-c6-rgb);
+  --graph-node: var(--pc-a);
+  --graph-node-focused: var(--pc-b);
+  --graph-node-tag: var(--pc-c3);
+  --graph-node-attachment: var(--pc-c4);
+  --graph-node-unresolved: var(--pc-faint);
+  --graph-line: rgba(var(--pc-text-rgb), 0.18);
+  --graph-text: var(--pc-text);
+}
+
+/* The glowing backdrop behind everything */
+body .app-container {
+  background:
+    radial-gradient(70vw 60vh at 12% -8%, rgba(var(--pc-glow-a-rgb), 0.42), transparent 62%),
+    radial-gradient(70vw 70vh at 100% 105%, rgba(var(--pc-glow-b-rgb), 0.36), transparent 62%),
+    var(--pc-bg);
+}
+body.theme-light .app-container {
+  background:
+    radial-gradient(70vw 60vh at 12% -8%, rgba(var(--pc-glow-a-rgb), 0.35), transparent 62%),
+    radial-gradient(70vw 70vh at 100% 105%, rgba(var(--pc-glow-b-rgb), 0.30), transparent 62%),
+    var(--pc-bg);
+}
+body.pc-no-glow .app-container,
+body.pc-solid .app-container { background: var(--pc-bg); }
+
+.workspace,
+.horizontal-main-container,
+.workspace-ribbon,
+.titlebar { background: transparent; }
+.workspace-ribbon { border: 0; }
+.workspace-ribbon.mod-left::before { display: none; }
+body.pc-hide-ribbon:not(.is-mobile) .workspace-ribbon.mod-left { display: none; }
+
+/* =====================================================================
+   Floating glass panels (desktop)
+   ===================================================================== */
+body:not(.is-mobile) .workspace-split.mod-left-split,
+body:not(.is-mobile) .workspace-split.mod-right-split,
+body:not(.is-mobile) .workspace-split.mod-root {
+  margin: var(--pc-gap) 0 var(--pc-gap) var(--pc-gap);
+  border-radius: var(--pc-radius);
+  border: 1px solid rgba(var(--pc-text-rgb), 0.10);
+  overflow: hidden;
+  background: rgba(var(--pc-panel-rgb), var(--pc-glass));
+  -webkit-backdrop-filter: blur(calc(var(--pc-blur) * var(--pc-blur-scale))) saturate(140%);
+  backdrop-filter: blur(calc(var(--pc-blur) * var(--pc-blur-scale))) saturate(140%);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+}
+body:not(.is-mobile) .workspace-split.mod-right-split { margin-right: var(--pc-gap); }
+body:not(.is-mobile) .workspace-split.mod-root {
+  background: rgba(var(--pc-panel-rgb), calc(var(--pc-glass) + 0.12));
+}
+body.theme-light:not(.is-mobile) .workspace-split.mod-left-split,
+body.theme-light:not(.is-mobile) .workspace-split.mod-right-split,
+body.theme-light:not(.is-mobile) .workspace-split.mod-root {
+  box-shadow: 0 24px 60px rgba(40, 30, 60, 0.12);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+body:not(.is-mobile) .workspace-split.mod-left-split.is-collapsed,
+body:not(.is-mobile) .workspace-split.mod-right-split.is-collapsed { margin: 0; border: 0; box-shadow: none; }
+
+/* Panel insides are transparent so the glass shows through */
+.workspace-split.mod-root,
+.workspace-split.mod-left-split,
+.workspace-split.mod-right-split {
+  --background-primary: transparent;
+  --background-secondary: transparent;
+  --background-secondary-alt: transparent;
+  --tab-background-active: transparent;
+}
+.workspace-split .workspace-leaf,
+.workspace-split .workspace-tabs,
+.workspace-split .workspace-leaf-content,
+.workspace-split .view-header,
+.workspace-split .view-content,
+.workspace-split .workspace-tab-header-container { background: transparent; }
+.workspace-leaf-resize-handle { border-color: transparent !important; }
+
+/* Solid mode */
+body.pc-solid:not(.is-mobile) .workspace-split.mod-left-split,
+body.pc-solid:not(.is-mobile) .workspace-split.mod-right-split,
+body.pc-solid:not(.is-mobile) .workspace-split.mod-root {
+  background: var(--pc-panel);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+/* =====================================================================
+   Tabs: centered pills
+   ===================================================================== */
+body:not(.pc-classic-tabs) .workspace-tab-header-container { border-bottom: 0; }
+body:not(.pc-classic-tabs) .mod-root .workspace-tab-header-container-inner {
+  justify-content: safe center;
+  gap: 4px;
+  padding-top: 4px;
+}
+body:not(.pc-classic-tabs) .workspace-tab-header::before,
+body:not(.pc-classic-tabs) .workspace-tab-header::after { display: none; }
+body:not(.pc-classic-tabs) .mod-root .workspace-tab-header {
+  border-radius: 999px;
+  padding: 0 4px;
+  margin: 6px 0;
+  height: 32px;
+  background: transparent;
+}
+body:not(.pc-classic-tabs) .mod-root .workspace-tab-header .workspace-tab-header-inner { border-radius: 999px; }
+body:not(.pc-classic-tabs) .mod-root .workspace-tab-header.is-active {
+  background: rgba(var(--pc-text-rgb), 0.11);
+  box-shadow: none;
+}
+body:not(.pc-classic-tabs) .mod-root .workspace-tab-header:not(.is-active):hover { background: rgba(var(--pc-text-rgb), 0.06); }
+body:not(.pc-classic-tabs) .workspace-tab-header-inner::after { display: none; }
+.view-header { border-bottom: 0; }
+
+/* =====================================================================
+   Sidebar and file explorer
+   ===================================================================== */
+.nav-file-title, .nav-folder-title, .tree-item-self { border-radius: 10px; }
+.nav-file-title.is-active, .tree-item-self.is-active {
+  background: linear-gradient(90deg, rgba(var(--pc-a-rgb), 0.22), rgba(var(--pc-b-rgb), 0.12));
+  color: var(--pc-text);
+  font-weight: 550;
+}
+.nav-folder-title { font-weight: 600; }
+
+/* Colored folders: a dot and a tint per top-level folder, cycling through six colors */
+body:not(.pc-no-folder-colors) .nav-files-container > div > .nav-folder:nth-of-type(6n+1) > .nav-folder-title { --pc-folder: var(--pc-c1); }
+body:not(.pc-no-folder-colors) .nav-files-container > div > .nav-folder:nth-of-type(6n+2) > .nav-folder-title { --pc-folder: var(--pc-c2); }
+body:not(.pc-no-folder-colors) .nav-files-container > div > .nav-folder:nth-of-type(6n+3) > .nav-folder-title { --pc-folder: var(--pc-c3); }
+body:not(.pc-no-folder-colors) .nav-files-container > div > .nav-folder:nth-of-type(6n+4) > .nav-folder-title { --pc-folder: var(--pc-c4); }
+body:not(.pc-no-folder-colors) .nav-files-container > div > .nav-folder:nth-of-type(6n+5) > .nav-folder-title { --pc-folder: var(--pc-c5); }
+body:not(.pc-no-folder-colors) .nav-files-container > div > .nav-folder:nth-of-type(6n+6) > .nav-folder-title { --pc-folder: var(--pc-c6); }
+body:not(.pc-no-folder-colors) .nav-files-container > div > .nav-folder > .nav-folder-title .nav-folder-title-content::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: 0.06em;
+  background: var(--pc-folder, var(--pc-a));
+}
+body:not(.pc-no-folder-colors) .nav-files-container > div > .nav-folder > .nav-folder-children {
+  border-left: 1px solid color-mix(in srgb, var(--pc-folder, var(--pc-a)) 35%, transparent);
+}
+body:not(.pc-no-folder-colors) .nav-files-container > div > .nav-folder > .nav-folder-title ~ .nav-folder-children { border-left-color: transparent; }
+
+/* =====================================================================
+   Notes
+   ===================================================================== */
+.inline-title, .markdown-rendered h1, .markdown-rendered h2, .HyperMD-header-1, .HyperMD-header-2 { letter-spacing: -0.02em; }
+.markdown-rendered h2 { margin-top: 1.4em; }
+
+/* Per-note palette: a soft glow from the note's own colors */
+.markdown-preview-view[class*=" pc-"],
+.markdown-source-view[class*=" pc-"] {
+  background:
+    radial-gradient(60% 40% at 0% 0%, rgba(var(--pc-glow-a-rgb), 0.14), transparent 70%),
+    radial-gradient(60% 40% at 100% 100%, rgba(var(--pc-glow-b-rgb), 0.12), transparent 70%);
+}
+
+/* Properties as chips */
+.metadata-container {
+  --metadata-property-background: rgba(var(--pc-text-rgb), 0.05);
+  --metadata-property-background-hover: rgba(var(--pc-text-rgb), 0.09);
+  --metadata-property-radius: 10px;
+  --metadata-divider-color: transparent;
+  border: 0;
+}
+.metadata-property { margin-bottom: 3px; }
+
+/* Tasks as cards */
+body:not(.pc-plain-tasks) .markdown-rendered .contains-task-list > .task-list-item {
+  list-style: none;
+  background: rgba(var(--pc-text-rgb), 0.05);
+  border: 1px solid rgba(var(--pc-text-rgb), 0.06);
+  border-radius: 14px;
+  padding: 8px 12px 8px 36px;
+  margin: 6px 0;
+  text-indent: 0;
+}
+body:not(.pc-plain-tasks) .markdown-rendered .contains-task-list > .task-list-item > .task-list-item-checkbox { margin-left: -24px; }
+body:not(.pc-plain-tasks) .markdown-rendered .contains-task-list > .task-list-item.is-checked { opacity: 0.7; }
+body:not(.pc-plain-tasks) .markdown-source-view.mod-cm6 .HyperMD-task-line {
+  background: rgba(var(--pc-text-rgb), 0.045);
+  border-radius: 12px;
+  margin: 3px 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+input[type="checkbox"]:checked { background-color: var(--pc-a); border-color: var(--pc-a); }
+
+/* Callouts, quotes, code */
+.callout {
+  border: 1px solid rgba(var(--callout-color), 0.25);
+  background: linear-gradient(135deg, rgba(var(--callout-color), 0.14), rgba(var(--callout-color), 0.05));
+}
+.markdown-rendered blockquote {
+  background: rgba(var(--pc-text-rgb), 0.04);
+  border-radius: 0 14px 14px 0;
+  padding: 0.6em 1.1em;
+}
+.markdown-rendered pre, .markdown-rendered code { border-radius: 10px; }
+.markdown-rendered mark, .cm-highlight { border-radius: 4px; padding: 0 2px; }
+.markdown-rendered table { border-radius: 12px; overflow: hidden; }
+
+/* Status bar as a floating pill */
+body:not(.is-mobile) .status-bar {
+  background: rgba(var(--pc-panel-rgb), 0.82);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(var(--pc-text-rgb), 0.12);
+  border-radius: 999px;
+  bottom: calc(var(--pc-gap) + 8px);
+  right: calc(var(--pc-gap) + 12px);
+  padding: 2px 10px;
+}
+
+/* Modals, menus and popovers keep the glass look */
+.modal, .menu, .popover, .suggestion-container, .prompt {
+  background: rgba(var(--pc-panel-rgb), 0.92);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid rgba(var(--pc-text-rgb), 0.12);
+}
+body.pc-solid .modal, body.pc-solid .menu, body.pc-solid .popover,
+body.pc-solid .suggestion-container, body.pc-solid .prompt { background: var(--pc-panel); }
+
+/* =====================================================================
+   Graph view and Canvas
+   ===================================================================== */
+.graph-view.color-fill { color: var(--pc-a); }
+.graph-view.color-fill-focused { color: var(--pc-b); }
+.graph-view.color-fill-highlight { color: var(--pc-b); }
+.graph-view.color-fill-tag { color: var(--pc-c3); }
+.graph-view.color-fill-attachment { color: var(--pc-c4); }
+.graph-view.color-fill-unresolved { color: var(--pc-faint); }
+.graph-view.color-circle { color: var(--pc-b); }
+.graph-view.color-line { color: rgba(var(--pc-text-rgb), 0.18); }
+.graph-view.color-line-highlight { color: var(--pc-a); }
+.graph-view.color-text { color: var(--pc-text); }
+.graph-view.color-arrow { color: var(--pc-muted); }
+.canvas-node-container { border-radius: 16px; }
+.canvas-node-content { background: rgba(var(--pc-panel-rgb), 0.86); }
+
+/* =====================================================================
+   Popular plugins
+   ===================================================================== */
+/* Tasks */
+.tasks-backlink, .task-extras { color: var(--pc-faint); }
+.task-due, .task-scheduled, .task-start { color: var(--pc-muted); }
+.task-list-item[data-task-priority="high"] .task-priority { color: var(--pc-a); }
+
+/* Dataview */
+.dataview.table-view-table thead th { color: var(--pc-a); font-weight: 600; }
+.dataview.table-view-table tbody tr:hover { background: rgba(var(--pc-a-rgb), 0.08); }
+.dataview.inline-field-key {
+  background: rgba(var(--pc-a-rgb), 0.15);
+  color: var(--pc-a);
+  border-radius: 8px 0 0 8px;
+  padding: 0 6px;
+}
+.dataview.inline-field-value {
+  background: rgba(var(--pc-text-rgb), 0.06);
+  border-radius: 0 8px 8px 0;
+  padding: 0 6px;
+}
+
+/* Kanban */
+.kanban-plugin { background: transparent; }
+.kanban-plugin__lane {
+  background: rgba(var(--pc-text-rgb), 0.05);
+  border: 1px solid rgba(var(--pc-text-rgb), 0.08);
+  border-radius: 18px;
+}
+.kanban-plugin__item {
+  border-radius: 12px;
+  background: rgba(var(--pc-panel-rgb), 0.9);
+  border-color: rgba(var(--pc-text-rgb), 0.10);
+}
+.kanban-plugin__lane-title { color: var(--pc-a); }
+
+/* Calendar */
+#calendar-container {
+  --color-background-heading: transparent;
+  --color-background-day: transparent;
+  --color-background-weekend: transparent;
+  --color-dot: var(--pc-b);
+  --color-arrow: var(--pc-muted);
+  --color-text-today: var(--pc-a);
+  --color-text-heading: var(--pc-text);
+  --color-text-title: var(--pc-text);
+}
+#calendar-container .day { border-radius: 10px; }
+#calendar-container .day.active,
+#calendar-container .day.active:hover { background: var(--pc-a); color: var(--pc-on-a); }
+
+/* Excalidraw */
+.excalidraw .Island { border-radius: 14px; }
+
+/* =====================================================================
+   Mobile
+   ===================================================================== */
+body.is-mobile .workspace-split.mod-root {
+  --background-primary: transparent;
+}
+body.is-mobile .workspace-drawer {
+  background: rgba(var(--pc-panel-rgb), calc(var(--pc-glass) + 0.25));
+  -webkit-backdrop-filter: blur(calc(var(--pc-blur) * var(--pc-blur-scale)));
+  backdrop-filter: blur(calc(var(--pc-blur) * var(--pc-blur-scale)));
+  border-radius: 0 22px 22px 0;
+}
+body.is-mobile .workspace-drawer.mod-right { border-radius: 22px 0 0 22px; }
+body.is-mobile.pc-solid .workspace-drawer { background: var(--pc-panel); backdrop-filter: none; -webkit-backdrop-filter: none; }
+body.is-mobile {
+  --font-text-size: 17px;
+  --line-height-normal: 1.7;
+  --inline-title-size: calc(2em * var(--pc-heading-scale));
+  --file-margins: 16px 20px;
+}
+body.is-phone .mobile-navbar {
+  margin: 0 14px calc(10px + var(--safe-area-inset-bottom, 0px));
+  border-radius: 24px;
+  background: rgba(var(--pc-panel-rgb), 0.85);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(var(--pc-text-rgb), 0.12);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+}
+body.is-phone .mobile-navbar-action.mod-add-note {
+  background: linear-gradient(135deg, var(--pc-a), var(--pc-b));
+  color: var(--pc-on-a);
+  border-radius: 16px;
+}
+body.is-mobile .mobile-toolbar {
+  background: rgba(var(--pc-panel-rgb), 0.85);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(var(--pc-text-rgb), 0.10);
+}
+body.is-mobile .nav-file-title, body.is-mobile .tree-item-self { padding-top: 8px; padding-bottom: 8px; }
+body.is-mobile .markdown-rendered .contains-task-list > .task-list-item { padding-top: 10px; padding-bottom: 10px; }
+
+/* =====================================================================
+   Accessibility and print
+   ===================================================================== */
+@media (prefers-reduced-transparency: reduce) {
+  .workspace-split, .workspace-drawer, .modal, .menu, .popover, .status-bar, .mobile-navbar {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+}
+@media print {
+  .markdown-rendered, .markdown-preview-view { background: #fff !important; color: #111 !important; }
+}

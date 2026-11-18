@@ -1,0 +1,35 @@
+name: Bug report
+description: Something looks wrong
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What looks wrong?
+      description: A screenshot helps a lot.
+    validations:
+      required: true
+  - type: input
+    id: palette
+    attributes:
+      label: Palette and mode
+      placeholder: "Night Drive, dark"
+    validations:
+      required: true
+  - type: input
+    id: obsidian
+    attributes:
+      label: Obsidian version
+      placeholder: "1.10.3"
+  - type: dropdown
+    id: device
+    attributes:
+      label: Device
+      options: [macOS, Windows, Linux, iOS / iPadOS, Android]
+    validations:
+      required: true
+  - type: textarea
+    id: plugins
+    attributes:
+      label: Related plugin (if any)
+      placeholder: "Kanban, Dataview, Tasks…"

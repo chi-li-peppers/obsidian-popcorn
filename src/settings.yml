@@ -1,0 +1,104 @@
+/* @settings
+name: Popcorn
+id: popcorn
+settings:
+    -
+        id: pc-intro
+        title: "⭐ Enjoying Popcorn?"
+        description: "A star on GitHub helps other people find it: [github.com/chi-li-peppers/obsidian-popcorn](https://github.com/chi-li-peppers/obsidian-popcorn). Found a bug or want a palette? [Open an issue](https://github.com/chi-li-peppers/obsidian-popcorn/issues)."
+        type: info-text
+        markdown: true
+    -
+        id: pc-heading-palette
+        title: Palette
+        type: heading
+        level: 1
+        collapsed: false
+    -
+        id: pc-variant
+        title: Color grade
+        description: "Every palette has a dark and a light version and follows Obsidian's base color scheme. To give one note its own palette, add pc-<name> to its cssclasses property, e.g. pc-arrakis."
+        type: class-select
+        allowEmpty: false
+        default: popcorn-v-arrakis
+        options:
+{{OPTIONS}}
+    -
+        id: pc-heading-glass
+        title: Glass
+        type: heading
+        level: 1
+        collapsed: false
+    -
+        id: pc-glass
+        title: Glass opacity
+        description: "Lower is more see-through, 1 is fully solid."
+        type: variable-number-slider
+        default: 0.62
+        min: 0.3
+        max: 1
+        step: 0.02
+    -
+        id: pc-blur
+        title: Blur
+        description: "Background blur behind panels. Lower it on older devices."
+        type: variable-number-slider
+        default: 24
+        min: 0
+        max: 48
+        step: 2
+        format: px
+    -
+        id: pc-solid
+        title: Solid panels
+        description: "No transparency and no blur. Best for slow devices and maximum readability."
+        type: class-toggle
+    -
+        id: pc-no-glow
+        title: Hide background glow
+        type: class-toggle
+    -
+        id: pc-heading-layout
+        title: Layout and text
+        type: heading
+        level: 1
+        collapsed: true
+    -
+        id: file-line-width
+        title: Line width
+        description: "Width of the text column when readable line length is on."
+        type: variable-number-slider
+        default: 720
+        min: 480
+        max: 1200
+        step: 20
+        format: px
+    -
+        id: pc-heading-scale
+        title: Heading size
+        type: variable-number-slider
+        default: 1
+        min: 0.8
+        max: 1.3
+        step: 0.05
+    -
+        id: pc-classic-tabs
+        title: Classic tabs
+        description: "Use Obsidian's regular tab bar instead of centered pill tabs."
+        type: class-toggle
+    -
+        id: pc-hide-ribbon
+        title: Hide the ribbon
+        description: "Hide the narrow icon bar on the left edge (desktop)."
+        type: class-toggle
+    -
+        id: pc-no-folder-colors
+        title: Plain folders
+        description: "Turn off colored folders in the file explorer."
+        type: class-toggle
+    -
+        id: pc-plain-tasks
+        title: Plain tasks
+        description: "Show tasks as a regular list instead of cards."
+        type: class-toggle
+*/

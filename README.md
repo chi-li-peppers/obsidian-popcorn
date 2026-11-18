@@ -8,6 +8,18 @@ A glass theme for Obsidian with 22 palettes inspired by films and series. Floati
 
 <p align="center"><img src="docs/palettes.gif" alt="All 22 palettes" width="720"></p>
 
+## Screenshots
+
+A few palettes at full size — the ones that show the range best.
+
+| | |
+| --- | --- |
+| ![Arrakis](docs/previews/arrakis.jpg) | ![Night Drive](docs/previews/night-drive.jpg) |
+| ![Gargantua](docs/previews/gargantua.jpg) | ![Nine-Nine](docs/previews/nine-nine.jpg) |
+| ![Grand Pastel](docs/previews/grand-pastel.jpg) | ![Digital Rain](docs/previews/digital-rain.jpg) |
+
+[All 22 palettes in one sheet](docs/previews/all-scenes.jpg) · [On a phone](docs/previews/mobile-night-drive.jpg)
+
 ## Features
 
 - **Glass layout**: floating panels on a glowing backdrop, centered pill tabs, floating status bar

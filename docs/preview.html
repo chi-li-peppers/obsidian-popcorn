@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Popcorn preview</title>
+<link rel="stylesheet" href="../theme.css">
+<style>
+  /* Stand-in for Obsidian's own layout only — not part of the theme. */
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", system-ui, sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--text-normal, #ddd);
+    background: #1e1e1e;
+    overflow: hidden;
+  }
+  .app-container { height: 100vh; display: flex; flex-direction: column; }
+  .titlebar-text { color: var(--titlebar-text-color, var(--pc-muted)); }
+  .titlebar { height: 34px; display: flex; align-items: center; justify-content: center; font-size: 12px; }
+  .workspace { flex: 1; display: flex; min-height: 0; }
+  .workspace-split { display: flex; flex-direction: column; min-height: 0; }
+  .mod-left-split { width: 236px; }
+  .mod-right-split { width: 210px; }
+  .mod-root { flex: 1; min-width: 0; }
+  .workspace-tab-header-container { display: flex; align-items: center; height: 38px; gap: 2px; }
+  .workspace-tab-header { display: flex; align-items: center; height: 28px; font-size: 12px; }
+  .workspace-leaf-content { flex: 1; display: flex; flex-direction: column; min-height: 0; }
+  .view-header-title-container { display: flex; flex: 1; align-items: center; }
+  .view-header { height: 40px; display: flex; align-items: center; padding: 0 18px; font-size: 13px; }
+  .view-content { flex: 1; position: relative; min-height: 0; }
+  .horizontal-main-container { position: absolute; inset: 0; overflow: hidden; }
+  .markdown-preview-view { height: 100%; overflow: auto; padding: 0 40px; }
+  .markdown-preview-sizer { max-width: 700px; margin: 0 auto; padding: 26px 0 90px; }
+  h1 { font-size: 2em; margin: .6em 0 .3em; line-height: 1.15; }
+  h2 { font-size: 1.45em; margin: 1.4em 0 .4em; }
+  h3 { font-size: 1.15em; margin: 1.2em 0 .3em; }
+  p, ul, ol { margin: .7em 0; }
+  .inline-title { margin: .1em 0 .2em; color: var(--pc-a); }
+  blockquote { margin: 1em 0; padding: 10px 16px; }
+  blockquote p { margin: 0; }
+  pre { background: var(--pc-shade); padding: 12px 14px; border-radius: 10px; overflow: auto; font-size: 12.5px; }
+  code { font-family: "SF Mono", ui-monospace, Menlo, monospace; }
+  .callout { margin: 1.1em 0; padding: 12px 16px; }
+  .callout-title { font-weight: 600; margin-bottom: 4px; }
+  .nav-files-container { padding: 6px 8px; overflow: hidden; }
+  .nav-folder-title, .nav-file-title { padding: 4px 10px; font-size: 13px; margin-bottom: 1px; }
+  .nav-folder-title { color: var(--pc-muted); font-weight: 600; font-size: 12px; }
+  .nav-file-title { color: var(--text-normal); }
+  .view-header-title { color: var(--pc-muted); }
+  .contains-task-list { padding-left: 4px; list-style: none; }
+  /* Obsidian's core draws the checkbox; this stand-in does the same so screenshots
+     show the theme's accent, not the browser's default blue. */
+  input[type="checkbox"] { appearance: none; -webkit-appearance: none; width: 16px; height: 16px;
+    border-radius: 6px; border: 1.5px solid var(--checkbox-border-color, var(--pc-muted));
+    background: transparent; position: relative; vertical-align: -3px; }
+  input[type="checkbox"]:checked { background: var(--checkbox-color, var(--pc-a));
+    border-color: var(--checkbox-color, var(--pc-a)); }
+  input[type="checkbox"]:checked::after { content: ""; position: absolute; inset: 0;
+    background: var(--pc-on-accent, #111);
+    clip-path: polygon(20% 52%, 42% 72%, 80% 28%, 88% 38%, 42% 88%, 12% 60%); }
+  .task-list-item { display: flex; align-items: center; gap: 2px; }
+  .markdown-rendered a { color: var(--link-color, var(--pc-a)); }
+  .status-bar { display: flex; gap: 16px; align-items: center; }
+  .status-bar-item { white-space: nowrap; }
+  .mobile-navbar { display: none; }
+  body.is-mobile .workspace-tab-header-container { display: none; }
+  body.is-mobile .mod-left-split, body.is-mobile .mod-right-split { display: none; }
+  body.is-mobile .markdown-preview-view { padding: 0 4px; }
+  body.is-mobile .mobile-navbar {
+    display: flex; align-items: center; justify-content: space-around;
+    color: var(--pc-muted); font-size: 18px;
+  }
+  .mobile-navbar span { opacity: .85; }
+</style>
+</head>
+<body class="theme-dark pc-arrakis">
+<div class="app-container">
+  <div class="titlebar"><div class="titlebar-text">Popcorn — Movie Night</div></div>
+  <div class="workspace">
+    <div class="workspace-split mod-left-split">
+      <div class="workspace-tab-header-container">
+        <div class="workspace-tab-header is-active"><div class="workspace-tab-header-inner">Files</div></div>
+        <div class="workspace-tab-header"><div class="workspace-tab-header-inner">Search</div></div>
+      </div>
+      <div class="nav-files-container">
+        <div class="nav-folder-title">Notes</div>
+        <div class="nav-file-title is-active">Movie Night</div>
+        <div class="nav-file-title">Watchlist</div>
+        <div class="nav-file-title">Soundtrack cues</div>
+        <div class="nav-file-title">Set pieces</div>
+        <div class="nav-folder-title">Daily</div>
+        <div class="nav-file-title">Monday</div>
+      </div>
+    </div>
+    <div class="workspace-split mod-root">
+      <div class="workspace-tab-header-container">
+        <div class="workspace-tab-header is-active"><div class="workspace-tab-header-inner">Movie Night</div></div>
+        <div class="workspace-tab-header"><div class="workspace-tab-header-inner">Watchlist</div></div>
+      </div>
+      <div class="workspace-leaf-content">
+        <div class="view-header"><div class="view-header-title-container"><div class="view-header-title">Movie Night</div></div></div>
+        <div class="view-content">
+          <div class="horizontal-main-container">
+            <div class="markdown-preview-view markdown-rendered">
+              <div class="markdown-preview-sizer">
+                <h1 class="inline-title">Movie Night</h1>
+                <blockquote><p>A slow evening, one long film, the lights down low.</p></blockquote>
+                <p>The room should feel like the screen: warm at the edges, dark in the middle,
+                   and quiet enough to hear the projector. This note is the checklist for it.</p>
+                <h2>Before the opening shot</h2>
+                <ul class="contains-task-list">
+                  <li class="task-list-item"><input type="checkbox" checked> Dim the lamps</li>
+                  <li class="task-list-item"><input type="checkbox" checked> Grain on, letterbox off</li>
+                  <li class="task-list-item"><input type="checkbox"> Queue the intermission note</li>
+                </ul>
+                <h3>Sound</h3>
+                <p>Low end first, then the room tone. Muted text like this should stay readable
+                   on every scene — that is the whole point of the palette work.</p>
+                <div class="callout">
+                  <div class="callout-title">Cue</div>
+                  <div class="callout-content">Start the projector two minutes before the first frame.</div>
+                </div>
+                <pre><code>scene: arrakis
+grain: .35   vignette: .5   glass: .6</code></pre>
+                <p>Links look like <a href="#">this one</a>, and the active tab is a pill.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="workspace-split mod-right-split">
+      <div class="workspace-tab-header-container">
+        <div class="workspace-tab-header is-active"><div class="workspace-tab-header-inner">Outline</div></div>
+      </div>
+      <div class="nav-files-container">
+        <div class="nav-file-title">Before the opening shot</div>
+        <div class="nav-file-title">Sound</div>
+      </div>
+    </div>
+  </div>
+  <div class="status-bar">
+    <div class="status-bar-item">01:42:16</div>
+    <div class="status-bar-item">324 words</div>
+    <div class="status-bar-item">Reading view</div>
+  </div>
+  <div class="mobile-navbar">
+    <span>&#9776;</span><span>&#128269;</span><span>&#9776;</span><span>&#8942;</span>
+  </div>
+</div>
+<script>
+  var LIGHT = ["grand-pastel", "plastic-pink"];
+  var q = new URLSearchParams(location.search);
+  var scene = q.get("scene") || "arrakis";
+  document.body.className = (LIGHT.indexOf(scene) >= 0 ? "theme-light" : "theme-dark")
+    + " pc-" + scene + (q.get("mobile") ? " is-mobile" : "");
+</script>
+</body>
+</html>

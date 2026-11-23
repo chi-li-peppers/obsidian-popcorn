@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Popcorn Hero</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; width: 1600px; height: 960px; overflow: hidden; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", system-ui, sans-serif;
+    background:
+      radial-gradient(900px 540px at 14% 6%, rgba(232, 162, 74, 0.34), transparent 62%),
+      radial-gradient(800px 560px at 92% 94%, rgba(201, 115, 58, 0.28), transparent 62%),
+      #0c0907;
+    color: #f6efe8;
+    padding: 46px 56px 0;
+    position: relative;
+  }
+  header {
+    display: flex; align-items: baseline; gap: 20px; margin-bottom: 30px;
+  }
+  h1 {
+    margin: 0; font-size: 46px; font-weight: 800; letter-spacing: -0.03em;
+    font-family: "Iowan Old Style", Georgia, serif;
+    color: #fff6eb;
+  }
+  header span {
+    font-size: 19px; color: rgba(246, 239, 232, 0.72); font-weight: 450;
+  }
+  .stage { position: relative; width: 100%; height: 800px; }
+  .desktop {
+    width: 1240px; border-radius: 18px; display: block;
+    box-shadow: 0 36px 90px rgba(0, 0, 0, 0.68), 0 0 0 1px rgba(232, 162, 74, 0.24);
+  }
+  .phone-wrap {
+    position: absolute; right: 6px; top: 52px; width: 326px;
+    padding: 10px; border-radius: 44px;
+    background: linear-gradient(160deg, #2a221c, #14100d);
+    box-shadow: 0 36px 80px rgba(0, 0, 0, 0.78), 0 0 0 1.5px rgba(232, 162, 74, 0.30);
+  }
+  .phone-wrap img {
+    width: 100%; display: block; border-radius: 34px;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Popcorn</h1>
+    <span>22 film-inspired themes for Obsidian · distinct styles · dark &amp; light</span>
+  </header>
+  <div class="stage">
+    <img class="desktop" src="previews/arrakis.jpg" alt="Popcorn Arrakis desktop">
+    <div class="phone-wrap">
+      <img src="previews/mobile-arrakis.jpg" alt="Popcorn Arrakis mobile">
+    </div>
+  </div>
+</body>
+</html>

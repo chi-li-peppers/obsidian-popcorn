@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Popcorn preview</title>
 <link rel="stylesheet" href="../theme.css">
 <style>
@@ -9,153 +10,343 @@
   * { box-sizing: border-box; }
   html, body { height: 100%; margin: 0; }
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Inter", system-ui, sans-serif;
+    font-family: var(--font-text-theme, -apple-system, BlinkMacSystemFont, "Inter", system-ui, sans-serif);
     font-size: 15px;
     line-height: 1.55;
     color: var(--text-normal, #ddd);
-    background: #1e1e1e;
+    background: var(--pc-bg, #121216);
     overflow: hidden;
+    -webkit-font-smoothing: antialiased;
   }
-  .app-container { height: 100vh; display: flex; flex-direction: column; }
-  .titlebar-text { color: var(--titlebar-text-color, var(--pc-muted)); }
-  .titlebar { height: 34px; display: flex; align-items: center; justify-content: center; font-size: 12px; }
+  .app-container { height: 100vh; display: flex; flex-direction: column; position: relative; }
+  .titlebar {
+    height: 32px; display: flex; align-items: center; justify-content: center;
+    font-size: 12px; position: relative; flex-shrink: 0;
+  }
+  .traffic { position: absolute; left: 14px; display: flex; gap: 7px; }
+  .traffic i { width: 11px; height: 11px; border-radius: 50%; display: block; opacity: 0.72; }
+  .traffic i:nth-child(1) { background: #ff5f56; }
+  .traffic i:nth-child(2) { background: #ffbd2e; }
+  .traffic i:nth-child(3) { background: #27c93f; }
+  .titlebar-text { color: var(--pc-muted); font-weight: 500; letter-spacing: 0.01em; }
+
   .workspace { flex: 1; display: flex; min-height: 0; }
+  .workspace-ribbon.mod-left {
+    width: 44px; display: flex; flex-direction: column; align-items: center;
+    padding: 16px 0; gap: 18px; color: var(--pc-faint); flex-shrink: 0;
+  }
+  .workspace-ribbon svg { width: 17px; height: 17px; stroke: currentColor; fill: none; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+  .workspace-ribbon .rib-active { color: var(--pc-a); }
+
   .workspace-split { display: flex; flex-direction: column; min-height: 0; }
-  .mod-left-split { width: 236px; }
-  .mod-right-split { width: 210px; }
+  .mod-left-split { width: 224px; flex-shrink: 0; }
+  .mod-right-split { width: 210px; flex-shrink: 0; }
   .mod-root { flex: 1; min-width: 0; }
-  .workspace-tab-header-container { display: flex; align-items: center; height: 38px; gap: 2px; }
-  .workspace-tab-header { display: flex; align-items: center; height: 28px; font-size: 12px; }
+
+  .workspace-tab-header-container { display: flex; align-items: center; height: 44px; padding: 0 12px; flex-shrink: 0; }
+  .workspace-tab-header-container-inner { display: flex; align-items: center; width: 100%; }
+  .workspace-tab-header { display: flex; align-items: center; font-size: 12.5px; color: var(--pc-muted); }
+  .workspace-tab-header-inner { padding: 0 12px; display: flex; align-items: center; height: 100%; }
+  .workspace-tab-header.is-active { color: var(--pc-text); font-weight: 550; }
+
   .workspace-leaf-content { flex: 1; display: flex; flex-direction: column; min-height: 0; }
-  .view-header-title-container { display: flex; flex: 1; align-items: center; }
-  .view-header { height: 40px; display: flex; align-items: center; padding: 0 18px; font-size: 13px; }
   .view-content { flex: 1; position: relative; min-height: 0; }
   .horizontal-main-container { position: absolute; inset: 0; overflow: hidden; }
-  .markdown-preview-view { height: 100%; overflow: auto; padding: 0 40px; }
-  .markdown-preview-sizer { max-width: 700px; margin: 0 auto; padding: 26px 0 90px; }
-  h1 { font-size: 2em; margin: .6em 0 .3em; line-height: 1.15; }
-  h2 { font-size: 1.45em; margin: 1.4em 0 .4em; }
-  h3 { font-size: 1.15em; margin: 1.2em 0 .3em; }
-  p, ul, ol { margin: .7em 0; }
-  .inline-title { margin: .1em 0 .2em; color: var(--pc-a); }
-  blockquote { margin: 1em 0; padding: 10px 16px; }
-  blockquote p { margin: 0; }
-  pre { background: var(--pc-shade); padding: 12px 14px; border-radius: 10px; overflow: auto; font-size: 12.5px; }
-  code { font-family: "SF Mono", ui-monospace, Menlo, monospace; }
-  .callout { margin: 1.1em 0; padding: 12px 16px; }
-  .callout-title { font-weight: 600; margin-bottom: 4px; }
-  .nav-files-container { padding: 6px 8px; overflow: hidden; }
-  .nav-folder-title, .nav-file-title { padding: 4px 10px; font-size: 13px; margin-bottom: 1px; }
-  .nav-folder-title { color: var(--pc-muted); font-weight: 600; font-size: 12px; }
-  .nav-file-title { color: var(--text-normal); }
-  .view-header-title { color: var(--pc-muted); }
-  .contains-task-list { padding-left: 4px; list-style: none; }
-  /* Obsidian's core draws the checkbox; this stand-in does the same so screenshots
-     show the theme's accent, not the browser's default blue. */
-  input[type="checkbox"] { appearance: none; -webkit-appearance: none; width: 16px; height: 16px;
-    border-radius: 6px; border: 1.5px solid var(--checkbox-border-color, var(--pc-muted));
-    background: transparent; position: relative; vertical-align: -3px; }
-  input[type="checkbox"]:checked { background: var(--checkbox-color, var(--pc-a));
-    border-color: var(--checkbox-color, var(--pc-a)); }
-  input[type="checkbox"]:checked::after { content: ""; position: absolute; inset: 0;
-    background: var(--pc-on-accent, #111);
-    clip-path: polygon(20% 52%, 42% 72%, 80% 28%, 88% 38%, 42% 88%, 12% 60%); }
-  .task-list-item { display: flex; align-items: center; gap: 2px; }
-  .markdown-rendered a { color: var(--link-color, var(--pc-a)); }
-  .status-bar { display: flex; gap: 16px; align-items: center; }
-  .status-bar-item { white-space: nowrap; }
-  .mobile-navbar { display: none; }
-  body.is-mobile .workspace-tab-header-container { display: none; }
-  body.is-mobile .mod-left-split, body.is-mobile .mod-right-split { display: none; }
-  body.is-mobile .markdown-preview-view { padding: 0 4px; }
-  body.is-mobile .mobile-navbar {
-    display: flex; align-items: center; justify-content: space-around;
-    color: var(--pc-muted); font-size: 18px;
+  .markdown-preview-view { height: 100%; overflow: hidden; padding: 0 38px; }
+  .markdown-preview-sizer { max-width: 680px; margin: 0 auto; padding: 18px 0 60px; }
+
+  .inline-title {
+    font-size: var(--inline-title-size, 2.2em);
+    font-weight: var(--inline-title-weight, 750);
+    color: var(--inline-title-color, var(--pc-text));
+    margin: 0 0 14px; line-height: 1.15;
   }
-  .mobile-navbar span { opacity: .85; }
+  h2 { font-size: 1.38em; font-weight: 680; margin: 22px 0 8px; color: var(--h2-color); }
+  h3 { font-size: 1.12em; font-weight: 650; margin: 20px 0 8px; color: var(--h3-color); }
+  p { margin: 8px 0 12px; }
+
+  /* Property chips */
+  .prop-row { display: flex; flex-wrap: wrap; gap: 7px; margin: 0 0 18px; align-items: center; }
+  .prop-chip {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 4px 10px; border-radius: var(--pc-card-radius, 10px); font-size: 12.5px;
+    background: rgba(var(--pc-text-rgb), 0.055);
+    border: 1px solid rgba(var(--pc-text-rgb), 0.08);
+    color: var(--pc-text);
+  }
+  .prop-chip span { color: var(--pc-muted); }
+  a.tag {
+    display: inline-flex; align-items: center;
+    padding: 3px 10px; border-radius: 999px; font-size: 12.5px; font-weight: 500;
+    color: var(--tag-color); background: var(--tag-background);
+    border: 1px solid var(--tag-border-color); text-decoration: none;
+  }
+
+  /* File explorer */
+  .nav-files-container { padding: 8px 10px; overflow: hidden; }
+  .nav-folder { margin-bottom: 2px; }
+  .nav-folder-title, .nav-file-title {
+    padding: 5px 10px; font-size: 13px; margin-bottom: 1px;
+    display: flex; align-items: center;
+  }
+  .nav-folder-title { color: var(--pc-text); font-weight: 600; }
+  .nav-folder-children { margin-left: 14px; padding-left: 8px; }
+  .nav-file-title { color: var(--pc-muted); }
+  .nav-file-title.is-active { color: var(--pc-text); }
+
+  /* Right outline */
+  .outline-head {
+    padding: 12px 14px 6px; font-size: 11px; font-weight: 650;
+    text-transform: uppercase; letter-spacing: 0.08em; color: var(--pc-faint);
+  }
+  .outline-item { padding: 5px 14px; font-size: 13px; color: var(--pc-muted); }
+  .outline-item.sub { padding-left: 24px; font-size: 12.5px; color: var(--pc-faint); }
+  .outline-item.active { color: var(--pc-a); font-weight: 550; }
+  .palette-badge {
+    margin: 14px 14px 0; padding: 10px 12px; border-radius: var(--pc-card-radius, 12px);
+    background: rgba(var(--pc-a-rgb), 0.10);
+    border: 1px solid rgba(var(--pc-a-rgb), 0.24);
+    font-size: 12px;
+  }
+  .palette-badge b { display: block; color: var(--pc-a); font-size: 13px; margin-bottom: 2px; }
+  .palette-badge span { color: var(--pc-muted); font-size: 11.5px; }
+
+  /* Tasks */
+  .contains-task-list { padding-left: 0; margin: 10px 0 14px; list-style: none; }
+  input[type="checkbox"] {
+    appearance: none; -webkit-appearance: none; width: 16px; height: 16px;
+    border-radius: 6px; border: 1.5px solid var(--checkbox-border-color, var(--pc-muted));
+    background: transparent; position: relative; vertical-align: -3px; flex-shrink: 0;
+  }
+  input[type="checkbox"]:checked { background: var(--checkbox-color, var(--pc-a)); border-color: var(--checkbox-color, var(--pc-a)); }
+  input[type="checkbox"]:checked::after {
+    content: ""; position: absolute; inset: 0;
+    background: var(--pc-on-a, #111);
+    clip-path: polygon(20% 52%, 42% 72%, 80% 28%, 88% 38%, 42% 88%, 12% 60%);
+  }
+  .task-list-item { display: flex; align-items: center; gap: 10px; font-size: 14.5px; }
+  .task-list-item.is-checked span { text-decoration: line-through; color: var(--pc-faint); }
+  body:not(.pc-plain-tasks) .markdown-rendered .contains-task-list > .task-list-item { padding: 9px 14px !important; }
+  body:not(.pc-plain-tasks) .markdown-rendered .contains-task-list > .task-list-item > .task-list-item-checkbox { margin-left: 0 !important; }
+
+  .markdown-rendered a:not(.tag) { color: var(--link-color, var(--pc-a)); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(var(--pc-a-rgb), 0.45); }
+
+  /* Callout */
+  .callout { margin: 14px 0 18px; padding: 13px 16px; }
+  .callout-title { font-weight: 650; font-size: 14px; margin-bottom: 4px; display: flex; align-items: center; gap: 7px; }
+  .callout-content { font-size: 14px; color: var(--pc-text); opacity: 0.92; }
+
+  /* Table */
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 13.5px; border: 1px solid var(--table-border-color); border-radius: var(--pc-card-radius, 12px); }
+  th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--table-border-color); }
+  th { background: var(--table-header-background); color: var(--table-header-color); font-weight: 600; font-size: 12.5px; }
+  tr:last-child td { border-bottom: 0; }
+  td:nth-child(2) { color: var(--pc-muted); font-variant-numeric: tabular-nums; }
+  td:nth-child(3) { color: var(--pc-a); font-weight: 500; }
+
+  /* Floating status bar */
+  .status-bar {
+    position: fixed; display: flex; gap: 14px; align-items: center;
+    font-size: 11.5px; color: var(--pc-muted); z-index: 10;
+  }
+  .status-bar-item { white-space: nowrap; }
+
+  /* Mobile */
+  .mobile-topbar, .mobile-navbar { display: none; }
+  body.is-mobile, body.is-mobile .app-container { width: 390px; max-width: 100vw; overflow: hidden; }
+  body.is-mobile .titlebar,
+  body.is-mobile .workspace-ribbon,
+  body.is-mobile .mod-left-split,
+  body.is-mobile .mod-right-split,
+  body.is-mobile .workspace-tab-header-container,
+  body.is-mobile .status-bar { display: none !important; }
+  body.is-mobile .mobile-topbar {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 46px 18px 8px; font-size: 14px; color: var(--pc-muted); flex-shrink: 0;
+  }
+  body.is-mobile .markdown-preview-view { padding: 0 18px; }
+  body.is-mobile .markdown-preview-sizer { max-width: 100%; padding: 8px 0 96px; }
+  body.is-mobile .inline-title { font-size: 28px; }
+  body.is-mobile h2 { font-size: 20px; margin-top: 18px; }
+  body.is-mobile p { font-size: 14.5px; }
+  body.is-mobile .mobile-navbar {
+    position: fixed; left: 0; width: 362px; bottom: 0; height: 56px;
+    display: flex; align-items: center; justify-content: space-around;
+    padding: 0 12px; color: var(--pc-muted); z-index: 20;
+  }
+  body.is-mobile .mobile-navbar svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  body.is-mobile .mobile-navbar-action.mod-add-note {
+    width: 40px; height: 36px; display: grid; place-items: center;
+  }
 </style>
 </head>
-<body class="theme-dark pc-arrakis">
+<body class="theme-dark popcorn-v-arrakis">
 <div class="app-container">
-  <div class="titlebar"><div class="titlebar-text">Popcorn — Movie Night</div></div>
+  <div class="titlebar">
+    <div class="traffic"><i></i><i></i><i></i></div>
+    <div class="titlebar-text" id="tb-title">Popcorn — Movie Night</div>
+  </div>
+
+  <div class="mobile-topbar">
+    <span>‹ Movies</span>
+    <span>•••</span>
+  </div>
+
   <div class="workspace">
+    <div class="workspace-ribbon mod-left">
+      <svg class="rib-active" viewBox="0 0 24 24"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"/></svg>
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      <svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="12" cy="18" r="3"/><path d="M8.5 7.5 11 15M15.5 7.5 13 15"/></svg>
+      <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+    </div>
+
     <div class="workspace-split mod-left-split">
       <div class="workspace-tab-header-container">
-        <div class="workspace-tab-header is-active"><div class="workspace-tab-header-inner">Files</div></div>
-        <div class="workspace-tab-header"><div class="workspace-tab-header-inner">Search</div></div>
+        <div class="workspace-tab-header-container-inner">
+          <div class="workspace-tab-header is-active"><div class="workspace-tab-header-inner">Files</div></div>
+          <div class="workspace-tab-header"><div class="workspace-tab-header-inner">Search</div></div>
+        </div>
       </div>
       <div class="nav-files-container">
-        <div class="nav-folder-title">Notes</div>
-        <div class="nav-file-title is-active">Movie Night</div>
-        <div class="nav-file-title">Watchlist</div>
-        <div class="nav-file-title">Soundtrack cues</div>
-        <div class="nav-file-title">Set pieces</div>
-        <div class="nav-folder-title">Daily</div>
-        <div class="nav-file-title">Monday</div>
+        <div>
+          <div class="nav-folder">
+            <div class="nav-folder-title"><div class="nav-folder-title-content">Inbox</div></div>
+          </div>
+          <div class="nav-folder">
+            <div class="nav-folder-title"><div class="nav-folder-title-content">Movies</div></div>
+            <div class="nav-folder-children">
+              <div class="nav-file-title is-active">Movie Night</div>
+              <div class="nav-file-title">Watchlist</div>
+              <div class="nav-file-title">Soundtrack cues</div>
+              <div class="nav-file-title">Reviews</div>
+            </div>
+          </div>
+          <div class="nav-folder">
+            <div class="nav-folder-title"><div class="nav-folder-title-content">Projects</div></div>
+          </div>
+          <div class="nav-folder">
+            <div class="nav-folder-title"><div class="nav-folder-title-content">Travel</div></div>
+          </div>
+          <div class="nav-folder">
+            <div class="nav-folder-title"><div class="nav-folder-title-content">Daily</div></div>
+          </div>
+          <div class="nav-folder">
+            <div class="nav-folder-title"><div class="nav-folder-title-content">Archive</div></div>
+          </div>
+        </div>
       </div>
     </div>
+
     <div class="workspace-split mod-root">
       <div class="workspace-tab-header-container">
-        <div class="workspace-tab-header is-active"><div class="workspace-tab-header-inner">Movie Night</div></div>
-        <div class="workspace-tab-header"><div class="workspace-tab-header-inner">Watchlist</div></div>
+        <div class="workspace-tab-header-container-inner">
+          <div class="workspace-tab-header is-active"><div class="workspace-tab-header-inner">Movie Night</div></div>
+          <div class="workspace-tab-header"><div class="workspace-tab-header-inner">Watchlist</div></div>
+          <div class="workspace-tab-header"><div class="workspace-tab-header-inner">Weekend plan</div></div>
+        </div>
       </div>
       <div class="workspace-leaf-content">
-        <div class="view-header"><div class="view-header-title-container"><div class="view-header-title">Movie Night</div></div></div>
         <div class="view-content">
           <div class="horizontal-main-container">
             <div class="markdown-preview-view markdown-rendered">
               <div class="markdown-preview-sizer">
                 <h1 class="inline-title">Movie Night</h1>
-                <blockquote><p>A slow evening, one long film, the lights down low.</p></blockquote>
-                <p>The room should feel like the screen: warm at the edges, dark in the middle,
-                   and quiet enough to hear the projector. This note is the checklist for it.</p>
-                <h2>Before the opening shot</h2>
-                <ul class="contains-task-list">
-                  <li class="task-list-item"><input type="checkbox" checked> Dim the lamps</li>
-                  <li class="task-list-item"><input type="checkbox" checked> Grain on, letterbox off</li>
-                  <li class="task-list-item"><input type="checkbox"> Queue the intermission note</li>
-                </ul>
-                <h3>Sound</h3>
-                <p>Low end first, then the room tone. Muted text like this should stay readable
-                   on every scene — that is the whole point of the palette work.</p>
-                <div class="callout">
-                  <div class="callout-title">Cue</div>
-                  <div class="callout-content">Start the projector two minutes before the first frame.</div>
+                <div class="prop-row">
+                  <div class="prop-chip"><span>date</span> Friday, 8 pm</div>
+                  <div class="prop-chip"><span>guests</span> 6</div>
+                  <a class="tag" href="#">#weekend</a>
+                  <a class="tag" href="#">#cinema</a>
                 </div>
-                <pre><code>scene: arrakis
-grain: .35   vignette: .5   glass: .6</code></pre>
-                <p>Links look like <a href="#">this one</a>, and the active tab is a pill.</p>
+                <h2>Line-up</h2>
+                <p>Three films, one theme: <a href="#">space and time</a>. Longest one goes first while everyone is still awake.</p>
+                <ul class="contains-task-list">
+                  <li class="task-list-item is-checked"><input class="task-list-item-checkbox" type="checkbox" checked><span>Vote on the line-up</span></li>
+                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"><span>Order popcorn and lemonade</span></li>
+                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"><span>Set up the projector &amp; dim the lamps</span></li>
+                </ul>
+                <h3>House rules</h3>
+                <div class="callout">
+                  <div class="callout-title">Note</div>
+                  <div class="callout-content">No phones until the credits roll. Start the projector two minutes before the first frame.</div>
+                </div>
+                <table>
+                  <thead><tr><th>Slot</th><th>Runtime</th><th>Picked by</th></tr></thead>
+                  <tbody>
+                    <tr><td>Opening act</td><td>2h 46m</td><td>Nika</td></tr>
+                    <tr><td>Main feature</td><td>2h 49m</td><td>Dato</td></tr>
+                    <tr><td>Late show</td><td>1h 58m</td><td>Ana</td></tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
     <div class="workspace-split mod-right-split">
-      <div class="workspace-tab-header-container">
-        <div class="workspace-tab-header is-active"><div class="workspace-tab-header-inner">Outline</div></div>
-      </div>
-      <div class="nav-files-container">
-        <div class="nav-file-title">Before the opening shot</div>
-        <div class="nav-file-title">Sound</div>
+      <div class="outline-head">Outline</div>
+      <div class="outline-item active">Line-up</div>
+      <div class="outline-item sub">House rules</div>
+      <div class="outline-head" style="margin-top:16px">Palette</div>
+      <div class="palette-badge">
+        <b id="badge-name">Arrakis</b>
+        <span id="badge-film">Dune · Dark</span>
       </div>
     </div>
   </div>
+
   <div class="status-bar">
-    <div class="status-bar-item">01:42:16</div>
-    <div class="status-bar-item">324 words</div>
+    <div class="status-bar-item">162 words</div>
+    <div class="status-bar-item">3 backlinks</div>
     <div class="status-bar-item">Reading view</div>
   </div>
+
   <div class="mobile-navbar">
-    <span>&#9776;</span><span>&#128269;</span><span>&#9776;</span><span>&#8942;</span>
+    <svg viewBox="0 0 24 24"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"/></svg>
+    <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+    <div class="mobile-navbar-action mod-add-note">
+      <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+    </div>
+    <svg viewBox="0 0 24 24"><path d="m9 11 3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>
   </div>
 </div>
 <script>
+  var META = {
+    "arrakis": ["Arrakis", "Dune"],
+    "upside-down": ["Upside Down", "Stranger Things"],
+    "digital-rain": ["Digital Rain", "The Matrix"],
+    "off-world": ["Off-World", "Blade Runner 2049"],
+    "macrodata": ["Macrodata", "Severance"],
+    "black-lodge": ["Black Lodge", "Twin Peaks"],
+    "night-drive": ["Night Drive", "Drive"],
+    "gargantua": ["Gargantua", "Interstellar"],
+    "trinity": ["Trinity", "Oppenheimer"],
+    "wasteland": ["Wasteland", "Mad Max: Fury Road"],
+    "cordyceps": ["Cordyceps", "The Last of Us"],
+    "the-down-deep": ["The Down Deep", "Silo"],
+    "terminus": ["Terminus", "Foundation"],
+    "redwood": ["Redwood", "Sons of Anarchy"],
+    "dragonstone": ["Dragonstone", "House of the Dragon"],
+    "nine-nine": ["Nine-Nine", "Brooklyn Nine-Nine"],
+    "rolling-stone": ["Rolling Stone", "Reacher"],
+    "grand-pastel": ["Grand Pastel", "The Grand Budapest Hotel"],
+    "plastic-pink": ["Plastic Pink", "Barbie"],
+    "nevermore": ["Nevermore", "Wednesday"],
+    "glitter": ["Glitter", "Euphoria"],
+    "yes-chef": ["Yes Chef", "The Bear"]
+  };
   var LIGHT = ["grand-pastel", "plastic-pink"];
   var q = new URLSearchParams(location.search);
   var scene = q.get("scene") || "arrakis";
-  document.body.className = (LIGHT.indexOf(scene) >= 0 ? "theme-light" : "theme-dark")
-    + " pc-" + scene + (q.get("mobile") ? " is-mobile" : "");
+  var mode = q.get("mode") || (LIGHT.indexOf(scene) >= 0 ? "light" : "dark");
+  var isMobile = !!q.get("mobile");
+  document.body.className = "theme-" + mode + " popcorn-v-" + scene + (isMobile ? " is-mobile is-phone" : "");
+  var m = META[scene] || [scene, ""];
+  document.getElementById("badge-name").textContent = m[0];
+  document.getElementById("badge-film").textContent = m[1] + " · " + (mode === "light" ? "Light" : "Dark");
+  document.getElementById("tb-title").textContent = "Popcorn (" + m[0] + ") — Movie Night";
 </script>
 </body>
 </html>

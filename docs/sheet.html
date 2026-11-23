@@ -2,21 +2,57 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Popcorn — all scenes</title>
+<title>Popcorn — all 22 palettes</title>
 <style>
-  body { margin: 0; padding: 20px; background: #101012; font: 12px/1.3 -apple-system, system-ui, sans-serif; color: #ddd; }
-  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 28px; background: #0c0c10;
+    font: 13px/1.3 -apple-system, BlinkMacSystemFont, "Inter", system-ui, sans-serif; color: #ececf2;
+  }
+  header { display: flex; align-items: baseline; gap: 14px; margin-bottom: 22px; }
+  header h1 { margin: 0; font-size: 24px; font-weight: 750; letter-spacing: -0.02em; }
+  header span { color: #8c8c99; font-size: 14px; }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
   figure { margin: 0; }
-  img { width: 100%; display: block; border-radius: 8px; }
-  figcaption { padding-top: 5px; color: #b9b9c0; letter-spacing: .08em; text-transform: uppercase; font-size: 10px; }
+  img { width: 100%; display: block; border-radius: 10px; border: 1px solid rgba(255,255,255,0.08); }
+  figcaption { padding-top: 6px; display: flex; justify-content: space-between; align-items: baseline; }
+  figcaption b { font-size: 12.5px; font-weight: 600; color: #f2f2f7; }
+  figcaption span { font-size: 11px; color: #8c8c99; }
 </style>
 </head>
 <body>
+<header>
+  <h1>Popcorn</h1>
+  <span>22 palettes inspired by films and series · dark &amp; light</span>
+</header>
 <div class="grid" id="g"></div>
 <script>
-  var scenes = ["arrakis","upside-down","digital-rain","off-world","macrodata","black-lodge","night-drive","gargantua","trinity","wasteland","cordyceps","the-down-deep","terminus","redwood","dragonstone","nine-nine","rolling-stone","grand-pastel","plastic-pink","nevermore","glitter","yes-chef"];
+  var scenes = [
+    ["arrakis", "Arrakis", "Dune"],
+    ["upside-down", "Upside Down", "Stranger Things"],
+    ["digital-rain", "Digital Rain", "The Matrix"],
+    ["off-world", "Off-World", "Blade Runner 2049"],
+    ["macrodata", "Macrodata", "Severance"],
+    ["black-lodge", "Black Lodge", "Twin Peaks"],
+    ["night-drive", "Night Drive", "Drive"],
+    ["gargantua", "Gargantua", "Interstellar"],
+    ["trinity", "Trinity", "Oppenheimer"],
+    ["wasteland", "Wasteland", "Mad Max: Fury Road"],
+    ["cordyceps", "Cordyceps", "The Last of Us"],
+    ["the-down-deep", "The Down Deep", "Silo"],
+    ["terminus", "Terminus", "Foundation"],
+    ["redwood", "Redwood", "Sons of Anarchy"],
+    ["dragonstone", "Dragonstone", "House of the Dragon"],
+    ["nine-nine", "Nine-Nine", "Brooklyn Nine-Nine"],
+    ["rolling-stone", "Rolling Stone", "Reacher"],
+    ["grand-pastel", "Grand Pastel", "The Grand Budapest Hotel"],
+    ["plastic-pink", "Plastic Pink", "Barbie"],
+    ["nevermore", "Nevermore", "Wednesday"],
+    ["glitter", "Glitter", "Euphoria"],
+    ["yes-chef", "Yes Chef", "The Bear"]
+  ];
   document.getElementById("g").innerHTML = scenes.map(function (s) {
-    return '<figure><img src="previews/' + s + '.png"><figcaption>' + s.replace(/-/g, " ") + '</figcaption></figure>';
+    return '<figure><img src="previews/' + s[0] + '.jpg"><figcaption><b>' + s[1] + '</b><span>' + s[2] + '</span></figcaption></figure>';
   }).join("");
 </script>
 </body>

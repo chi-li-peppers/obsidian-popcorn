@@ -14,9 +14,9 @@ A few palettes at full size — the ones that show the range best.
 
 | | |
 | --- | --- |
-| ![Arrakis](docs/previews/arrakis.jpg) | ![Night Drive](docs/previews/night-drive.jpg) |
-| ![Gargantua](docs/previews/gargantua.jpg) | ![Nine-Nine](docs/previews/nine-nine.jpg) |
-| ![Grand Pastel](docs/previews/grand-pastel.jpg) | ![Digital Rain](docs/previews/digital-rain.jpg) |
+| ![Arrakis](docs/previews/arrakis.jpg) | ![Digital Rain](docs/previews/digital-rain.jpg) |
+| ![Grand Pastel](docs/previews/grand-pastel.jpg) | ![Black Lodge](docs/previews/black-lodge.jpg) |
+| ![Macrodata](docs/previews/macrodata.jpg) | ![Night Drive](docs/previews/night-drive.jpg) |
 
 [All 22 palettes in one sheet](docs/previews/all-scenes.jpg) · [On a phone](docs/previews/mobile-night-drive.jpg)
 

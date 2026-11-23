@@ -14,6 +14,16 @@
    "b": "#c9733a",
    "glow_a": "#e8a24a",
    "glow_b": "#c9733a",
+   "style": {
+    "body": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "head": "\"Iowan Old Style\", \"Palatino Linotype\", Palatino, Georgia, serif",
+    "radius": "14px",
+    "card_r": "10px",
+    "head_ls": "0.04em",
+    "head_tt": "uppercase",
+    "h1_scale": "1.06",
+    "glass": "0.68"
+   },
    "on_a": "#111111",
    "c": [
     "#e8a24a",
@@ -35,6 +45,16 @@
    "b": "#c9733a",
    "glow_a": "#ebb065",
    "glow_b": "#d18858",
+   "style": {
+    "body": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "head": "\"Iowan Old Style\", \"Palatino Linotype\", Palatino, Georgia, serif",
+    "radius": "14px",
+    "card_r": "10px",
+    "head_ls": "0.04em",
+    "head_tt": "uppercase",
+    "h1_scale": "1.06",
+    "glass": "0.68"
+   },
    "on_a": "#ffffff",
    "c": [
     "#a36415",
@@ -51,45 +71,65 @@
   "name": "Upside Down",
   "film": "Stranger Things",
   "dark": {
-   "bg": "#0a0d1a",
-   "panel": "#181c2a",
-   "eff": "#131724",
+   "bg": "#090b16",
+   "panel": "#191b29",
+   "eff": "#131522",
    "text": "#e8e9ed",
-   "muted": "#abaeba",
-   "faint": "#75798a",
-   "a": "#e5484d",
+   "muted": "#abadba",
+   "faint": "#75788a",
+   "a": "#ef3e4a",
    "b": "#4a6cff",
-   "glow_a": "#e5484d",
+   "glow_a": "#ef3e4a",
    "glow_b": "#4a6cff",
+   "style": {
+    "body": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "head": "\"Iowan Old Style\", \"Palatino Linotype\", Palatino, Georgia, serif",
+    "radius": "10px",
+    "card_r": "8px",
+    "head_ls": "0.03em",
+    "head_tt": "uppercase",
+    "h1_scale": "1.08",
+    "glass": "0.62"
+   },
    "on_a": "#111111",
    "c": [
-    "#e5484d",
+    "#ef3e4a",
     "#4a6cff",
-    "#985aa6",
-    "#50e548",
-    "#48e5e0",
-    "#9248e5"
+    "#9c55a4",
+    "#4eef3e",
+    "#3eefe3",
+    "#8a3eef"
    ]
   },
   "light": {
-   "bg": "#f4e9e9",
+   "bg": "#f4e8e9",
    "panel": "#ffffff",
    "eff": "#fbf7f7",
-   "text": "#291919",
-   "muted": "#6d5556",
+   "text": "#29191a",
+   "muted": "#6d5557",
    "faint": "#958384",
-   "a": "#dd1f25",
+   "a": "#e31321",
    "b": "#4a6cff",
-   "glow_a": "#e96368",
+   "glow_a": "#f15b65",
    "glow_b": "#6582ff",
+   "style": {
+    "body": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "head": "\"Iowan Old Style\", \"Palatino Linotype\", Palatino, Georgia, serif",
+    "radius": "10px",
+    "card_r": "8px",
+    "head_ls": "0.03em",
+    "head_tt": "uppercase",
+    "h1_scale": "1.08",
+    "glass": "0.62"
+   },
    "on_a": "#ffffff",
    "c": [
-    "#dd1f25",
+    "#e31321",
     "#4a6cff",
-    "#944692",
-    "#1ea217",
-    "#169d98",
-    "#781fdd"
+    "#964090",
+    "#1ba50e",
+    "#0d9f95",
+    "#6d13e3"
    ]
   }
  },
@@ -98,16 +138,26 @@
   "name": "Digital Rain",
   "film": "The Matrix",
   "dark": {
-   "bg": "#020a04",
+   "bg": "#020904",
    "panel": "#162c1c",
    "eff": "#0f2014",
-   "text": "#e8ede9",
+   "text": "#e8edea",
    "muted": "#abbaaf",
-   "faint": "#758a7a",
+   "faint": "#758a7b",
    "a": "#39ff6a",
    "b": "#0fa24a",
    "glow_a": "#39ff6a",
    "glow_b": "#0fa24a",
+   "style": {
+    "body": "\"SF Mono\", ui-monospace, \"JetBrains Mono\", Menlo, Consolas, monospace",
+    "head": "\"SF Mono\", ui-monospace, \"JetBrains Mono\", Menlo, Consolas, monospace",
+    "radius": "4px",
+    "card_r": "3px",
+    "head_ls": "0.04em",
+    "head_tt": "uppercase",
+    "h1_scale": "0.96",
+    "glass": "0.72"
+   },
    "on_a": "#111111",
    "c": [
     "#39ff6a",
@@ -129,6 +179,16 @@
    "b": "#0fa24a",
    "glow_a": "#57ff80",
    "glow_b": "#33b065",
+   "style": {
+    "body": "\"SF Mono\", ui-monospace, \"JetBrains Mono\", Menlo, Consolas, monospace",
+    "head": "\"SF Mono\", ui-monospace, \"JetBrains Mono\", Menlo, Consolas, monospace",
+    "radius": "4px",
+    "card_r": "3px",
+    "head_ls": "0.04em",
+    "head_tt": "uppercase",
+    "h1_scale": "0.96",
+    "glass": "0.72"
+   },
    "on_a": "#ffffff",
    "c": [
     "#008020",
@@ -145,16 +205,26 @@
   "name": "Off-World",
   "film": "Blade Runner 2049",
   "dark": {
-   "bg": "#160a04",
-   "panel": "#2c1e16",
-   "eff": "#241710",
-   "text": "#edeae8",
-   "muted": "#bab0ab",
-   "faint": "#8a7c75",
+   "bg": "#140905",
+   "panel": "#2c1c16",
+   "eff": "#241510",
+   "text": "#ede9e8",
+   "muted": "#baafab",
+   "faint": "#8a7b75",
    "a": "#ff8a2a",
    "b": "#ff3d7f",
    "glow_a": "#ff8a2a",
    "glow_b": "#ff3d7f",
+   "style": {
+    "body": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "head": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "radius": "6px",
+    "card_r": "5px",
+    "head_ls": "0.06em",
+    "head_tt": "uppercase",
+    "h1_scale": "1.0",
+    "glass": "0.60"
+   },
    "on_a": "#111111",
    "c": [
     "#ff8a2a",
@@ -176,6 +246,16 @@
    "b": "#ff3d7f",
    "glow_a": "#ff9c4a",
    "glow_b": "#ff5a92",
+   "style": {
+    "body": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "head": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "radius": "6px",
+    "card_r": "5px",
+    "head_ls": "0.06em",
+    "head_tt": "uppercase",
+    "h1_scale": "1.0",
+    "glass": "0.60"
+   },
    "on_a": "#ffffff",
    "c": [
     "#bb5400",
@@ -192,9 +272,9 @@
   "name": "Macrodata",
   "film": "Severance",
   "dark": {
-   "bg": "#0a1416",
-   "panel": "#1a2629",
-   "eff": "#142022",
+   "bg": "#091315",
+   "panel": "#192629",
+   "eff": "#131f22",
    "text": "#e8eced",
    "muted": "#abb8ba",
    "faint": "#75868a",
@@ -202,6 +282,16 @@
    "b": "#9ab8b3",
    "glow_a": "#5fd3c8",
    "glow_b": "#9ab8b3",
+   "style": {
+    "body": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "head": "\"SF Mono\", ui-monospace, \"JetBrains Mono\", Menlo, Consolas, monospace",
+    "radius": "4px",
+    "card_r": "4px",
+    "head_ls": "0.06em",
+    "head_tt": "uppercase",
+    "h1_scale": "0.96",
+    "glass": "0.76"
+   },
    "on_a": "#111111",
    "c": [
     "#5fd3c8",
@@ -223,6 +313,16 @@
    "b": "#6f9a93",
    "glow_a": "#77dad0",
    "glow_b": "#a9c3be",
+   "style": {
+    "body": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "head": "\"SF Mono\", ui-monospace, \"JetBrains Mono\", Menlo, Consolas, monospace",
+    "radius": "4px",
+    "card_r": "4px",
+    "head_ls": "0.06em",
+    "head_tt": "uppercase",
+    "h1_scale": "0.96",
+    "glass": "0.76"
+   },
    "on_a": "#ffffff",
    "c": [
     "#227d74",
@@ -249,6 +349,16 @@
    "b": "#e8e2d6",
    "glow_a": "#e0353a",
    "glow_b": "#e8e2d6",
+   "style": {
+    "body": "\"Iowan Old Style\", \"Palatino Linotype\", Palatino, Georgia, serif",
+    "head": "\"Iowan Old Style\", \"Palatino Linotype\", Palatino, Georgia, serif",
+    "radius": "8px",
+    "card_r": "6px",
+    "head_ls": "0.02em",
+    "head_tt": "none",
+    "h1_scale": "1.06",
+    "glass": "0.68"
+   },
    "on_a": "#111111",
    "c": [
     "#e34a4f",
@@ -270,6 +380,16 @@
    "b": "#a48c5c",
    "glow_a": "#e55358",
    "glow_b": "#ebe6dc",
+   "style": {
+    "body": "\"Iowan Old Style\", \"Palatino Linotype\", Palatino, Georgia, serif",
+    "head": "\"Iowan Old Style\", \"Palatino Linotype\", Palatino, Georgia, serif",
+    "radius": "8px",
+    "card_r": "6px",
+    "head_ls": "0.02em",
+    "head_tt": "none",
+    "h1_scale": "1.06",
+    "glass": "0.68"
+   },
    "on_a": "#ffffff",
    "c": [
     "#db2227",
@@ -286,45 +406,65 @@
   "name": "Night Drive",
   "film": "Drive",
   "dark": {
-   "bg": "#0b0a18",
-   "panel": "#1a1929",
-   "eff": "#151423",
+   "bg": "#0b0918",
+   "panel": "#1b182a",
+   "eff": "#151324",
    "text": "#e9e8ed",
-   "muted": "#acabba",
-   "faint": "#77758a",
-   "a": "#ff7ac6",
+   "muted": "#adabba",
+   "faint": "#78758a",
+   "a": "#ff6ac1",
    "b": "#7b8cff",
-   "glow_a": "#ff7ac6",
+   "glow_a": "#ff6ac1",
    "glow_b": "#7b8cff",
+   "style": {
+    "body": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "head": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "radius": "16px",
+    "card_r": "12px",
+    "head_ls": "-0.02em",
+    "head_tt": "none",
+    "h1_scale": "1.04",
+    "glass": "0.58"
+   },
    "on_a": "#111111",
    "c": [
-    "#ff7ac6",
+    "#ff6ac1",
     "#7b8cff",
-    "#bd83e2",
-    "#c9ff7a",
-    "#7affb3",
-    "#7a84ff"
+    "#bd7be0",
+    "#c4ff6a",
+    "#6affa8",
+    "#6a77ff"
    ]
   },
   "light": {
    "bg": "#f4e8ef",
    "panel": "#ffffff",
    "eff": "#fbf7f9",
-   "text": "#291922",
+   "text": "#291923",
    "muted": "#6d5563",
    "faint": "#95838e",
-   "a": "#da007d",
+   "a": "#dc0081",
    "b": "#6f81ff",
-   "glow_a": "#ff8ecf",
+   "glow_a": "#ff80ca",
    "glow_b": "#8f9dff",
+   "style": {
+    "body": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "head": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "radius": "16px",
+    "card_r": "12px",
+    "head_ls": "-0.02em",
+    "head_tt": "none",
+    "h1_scale": "1.04",
+    "glass": "0.58"
+   },
    "on_a": "#ffffff",
    "c": [
-    "#da007d",
+    "#dc0081",
     "#6f81ff",
-    "#a440be",
-    "#5d9d00",
-    "#00a346",
-    "#0010da"
+    "#a640c0",
+    "#609f00",
+    "#00a544",
+    "#0013dc"
    ]
   }
  },
@@ -333,9 +473,9 @@
   "name": "Gargantua",
   "film": "Interstellar",
   "dark": {
-   "bg": "#07070a",
-   "panel": "#1e1e25",
-   "eff": "#16161c",
+   "bg": "#050508",
+   "panel": "#1d1d26",
+   "eff": "#15151c",
    "text": "#e8e8ed",
    "muted": "#ababba",
    "faint": "#75758a",
@@ -343,6 +483,16 @@
    "b": "#ff8c42",
    "glow_a": "#f2b84b",
    "glow_b": "#ff8c42",
+   "style": {
+    "body": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "head": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "radius": "18px",
+    "card_r": "14px",
+    "head_ls": "0.08em",
+    "head_tt": "uppercase",
+    "h1_scale": "1.02",
+    "glass": "0.56"
+   },
    "on_a": "#111111",
    "c": [
     "#f2b84b",
@@ -364,6 +514,16 @@
    "b": "#f86100",
    "glow_a": "#f4c366",
    "glow_b": "#ff9d5e",
+   "style": {
+    "body": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "head": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "radius": "18px",
+    "card_r": "14px",
+    "head_ls": "0.08em",
+    "head_tt": "uppercase",
+    "h1_scale": "1.02",
+    "glass": "0.56"
+   },
    "on_a": "#ffffff",
    "c": [
     "#99680b",
@@ -380,16 +540,26 @@
   "name": "Trinity",
   "film": "Oppenheimer",
   "dark": {
-   "bg": "#120a06",
-   "panel": "#2b1e17",
-   "eff": "#221711",
+   "bg": "#110a06",
+   "panel": "#2b1f18",
+   "eff": "#221812",
    "text": "#edeae8",
    "muted": "#bab0ab",
-   "faint": "#8a7c75",
+   "faint": "#8a7d75",
    "a": "#ff6a2a",
    "b": "#ffc15e",
    "glow_a": "#ff6a2a",
    "glow_b": "#ffc15e",
+   "style": {
+    "body": "\"Iowan Old Style\", \"Palatino Linotype\", Palatino, Georgia, serif",
+    "head": "\"Iowan Old Style\", \"Palatino Linotype\", Palatino, Georgia, serif",
+    "radius": "6px",
+    "card_r": "4px",
+    "head_ls": "0.01em",
+    "head_tt": "none",
+    "h1_scale": "1.08",
+    "glass": "0.74"
+   },
    "on_a": "#111111",
    "c": [
     "#ff6a2a",
@@ -411,6 +581,16 @@
    "b": "#ca7c00",
    "glow_a": "#ff804a",
    "glow_b": "#ffca76",
+   "style": {
+    "body": "\"Iowan Old Style\", \"Palatino Linotype\", Palatino, Georgia, serif",
+    "head": "\"Iowan Old Style\", \"Palatino Linotype\", Palatino, Georgia, serif",
+    "radius": "6px",
+    "card_r": "4px",
+    "head_ls": "0.01em",
+    "head_tt": "none",
+    "h1_scale": "1.08",
+    "glass": "0.74"
+   },
    "on_a": "#ffffff",
    "c": [
     "#cd3e00",
@@ -427,16 +607,26 @@
   "name": "Wasteland",
   "film": "Mad Max: Fury Road",
   "dark": {
-   "bg": "#150c08",
-   "panel": "#2a1e18",
-   "eff": "#231812",
+   "bg": "#150c07",
+   "panel": "#2b1e17",
+   "eff": "#231811",
    "text": "#edeae8",
    "muted": "#bab0ab",
-   "faint": "#8a7c75",
+   "faint": "#8a7d75",
    "a": "#ff7b2e",
    "b": "#2fb8c4",
    "glow_a": "#ff7b2e",
    "glow_b": "#2fb8c4",
+   "style": {
+    "body": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "head": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "radius": "4px",
+    "card_r": "4px",
+    "head_ls": "0.05em",
+    "head_tt": "uppercase",
+    "h1_scale": "1.05",
+    "glass": "0.70"
+   },
    "on_a": "#111111",
    "c": [
     "#ff7b2e",
@@ -458,6 +648,16 @@
    "b": "#289ca6",
    "glow_a": "#ff8f4d",
    "glow_b": "#4ec3cd",
+   "style": {
+    "body": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "head": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "radius": "4px",
+    "card_r": "4px",
+    "head_ls": "0.05em",
+    "head_tt": "uppercase",
+    "h1_scale": "1.05",
+    "glass": "0.70"
+   },
    "on_a": "#ffffff",
    "c": [
     "#c54900",
@@ -474,7 +674,7 @@
   "name": "Cordyceps",
   "film": "The Last of Us",
   "dark": {
-   "bg": "#0c120c",
+   "bg": "#0b110b",
    "panel": "#1d251d",
    "eff": "#171e17",
    "text": "#e8ede8",
@@ -484,6 +684,16 @@
    "b": "#e0a458",
    "glow_a": "#8bbf5a",
    "glow_b": "#e0a458",
+   "style": {
+    "body": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "head": "\"Iowan Old Style\", \"Palatino Linotype\", Palatino, Georgia, serif",
+    "radius": "14px",
+    "card_r": "12px",
+    "head_ls": "-0.01em",
+    "head_tt": "none",
+    "h1_scale": "1.04",
+    "glass": "0.68"
+   },
    "on_a": "#111111",
    "c": [
     "#8bbf5a",
@@ -505,6 +715,16 @@
    "b": "#c98125",
    "glow_a": "#9cc973",
    "glow_b": "#e5b271",
+   "style": {
+    "body": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "head": "\"Iowan Old Style\", \"Palatino Linotype\", Palatino, Georgia, serif",
+    "radius": "14px",
+    "card_r": "12px",
+    "head_ls": "-0.01em",
+    "head_tt": "none",
+    "h1_scale": "1.04",
+    "glass": "0.68"
+   },
    "on_a": "#ffffff",
    "c": [
     "#547b30",
@@ -521,16 +741,26 @@
   "name": "The Down Deep",
   "film": "Silo",
   "dark": {
-   "bg": "#0f0f0d",
-   "panel": "#232320",
-   "eff": "#1c1c19",
-   "text": "#edede8",
-   "muted": "#babaab",
-   "faint": "#8a8a75",
+   "bg": "#0e0f0d",
+   "panel": "#212320",
+   "eff": "#1a1c19",
+   "text": "#ebede8",
+   "muted": "#b2baab",
+   "faint": "#808a75",
    "a": "#f2c230",
    "b": "#8f9a8a",
    "glow_a": "#f2c230",
    "glow_b": "#8f9a8a",
+   "style": {
+    "body": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "head": "\"SF Mono\", ui-monospace, \"JetBrains Mono\", Menlo, Consolas, monospace",
+    "radius": "4px",
+    "card_r": "3px",
+    "head_ls": "0.05em",
+    "head_tt": "uppercase",
+    "h1_scale": "0.98",
+    "glass": "0.76"
+   },
    "on_a": "#111111",
    "c": [
     "#f2c230",
@@ -552,6 +782,16 @@
    "b": "#899483",
    "glow_a": "#f4cb4f",
    "glow_b": "#a0a99c",
+   "style": {
+    "body": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "head": "\"SF Mono\", ui-monospace, \"JetBrains Mono\", Menlo, Consolas, monospace",
+    "radius": "4px",
+    "card_r": "3px",
+    "head_ls": "0.05em",
+    "head_tt": "uppercase",
+    "h1_scale": "0.98",
+    "glass": "0.76"
+   },
    "on_a": "#ffffff",
    "c": [
     "#8c6c09",
@@ -568,16 +808,26 @@
   "name": "Terminus",
   "film": "Foundation",
   "dark": {
-   "bg": "#08091a",
-   "panel": "#17182c",
-   "eff": "#121326",
-   "text": "#e8e8ed",
+   "bg": "#07091a",
+   "panel": "#16192c",
+   "eff": "#111326",
+   "text": "#e8e9ed",
    "muted": "#abacba",
-   "faint": "#75768a",
+   "faint": "#75778a",
    "a": "#d8b45a",
    "b": "#6aa6ff",
    "glow_a": "#d8b45a",
    "glow_b": "#6aa6ff",
+   "style": {
+    "body": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "head": "\"Iowan Old Style\", \"Palatino Linotype\", Palatino, Georgia, serif",
+    "radius": "14px",
+    "card_r": "10px",
+    "head_ls": "0.04em",
+    "head_tt": "none",
+    "h1_scale": "1.06",
+    "glass": "0.62"
+   },
    "on_a": "#111111",
    "c": [
     "#d8b45a",
@@ -599,6 +849,16 @@
    "b": "#4590ff",
    "glow_a": "#debf73",
    "glow_b": "#80b3ff",
+   "style": {
+    "body": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "head": "\"Iowan Old Style\", \"Palatino Linotype\", Palatino, Georgia, serif",
+    "radius": "14px",
+    "card_r": "10px",
+    "head_ls": "0.04em",
+    "head_tt": "none",
+    "h1_scale": "1.06",
+    "glass": "0.62"
+   },
    "on_a": "#ffffff",
    "c": [
     "#8b6c21",
@@ -615,9 +875,9 @@
   "name": "Redwood",
   "film": "Sons of Anarchy",
   "dark": {
-   "bg": "#120c0b",
-   "panel": "#261e1c",
-   "eff": "#1f1816",
+   "bg": "#110b0a",
+   "panel": "#261d1c",
+   "eff": "#1f1716",
    "text": "#ede9e8",
    "muted": "#baadab",
    "faint": "#8a7875",
@@ -625,6 +885,16 @@
    "b": "#b8b8b8",
    "glow_a": "#d63a30",
    "glow_b": "#b8b8b8",
+   "style": {
+    "body": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "head": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "radius": "4px",
+    "card_r": "4px",
+    "head_ls": "0.04em",
+    "head_tt": "uppercase",
+    "h1_scale": "1.04",
+    "glass": "0.76"
+   },
    "on_a": "#111111",
    "c": [
     "#dc574f",
@@ -646,6 +916,16 @@
    "b": "#909090",
    "glow_a": "#dc584f",
    "glow_b": "#c3c3c3",
+   "style": {
+    "body": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "head": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "radius": "4px",
+    "card_r": "4px",
+    "head_ls": "0.04em",
+    "head_tt": "uppercase",
+    "h1_scale": "1.04",
+    "glass": "0.76"
+   },
    "on_a": "#ffffff",
    "c": [
     "#d5352b",
@@ -662,9 +942,9 @@
   "name": "Dragonstone",
   "film": "House of the Dragon",
   "dark": {
-   "bg": "#0c0a0a",
-   "panel": "#231f1f",
-   "eff": "#1b1818",
+   "bg": "#0c0909",
+   "panel": "#241e1e",
+   "eff": "#1c1717",
    "text": "#ede8e8",
    "muted": "#baabab",
    "faint": "#8a7575",
@@ -672,6 +952,16 @@
    "b": "#c9962e",
    "glow_a": "#e2452f",
    "glow_b": "#c9962e",
+   "style": {
+    "body": "\"Iowan Old Style\", \"Palatino Linotype\", Palatino, Georgia, serif",
+    "head": "\"Iowan Old Style\", \"Palatino Linotype\", Palatino, Georgia, serif",
+    "radius": "8px",
+    "card_r": "6px",
+    "head_ls": "0.03em",
+    "head_tt": "uppercase",
+    "h1_scale": "1.05",
+    "glass": "0.70"
+   },
    "on_a": "#111111",
    "c": [
     "#e34f3a",
@@ -693,6 +983,16 @@
    "b": "#b58729",
    "glow_a": "#e6614e",
    "glow_b": "#d1a64d",
+   "style": {
+    "body": "\"Iowan Old Style\", \"Palatino Linotype\", Palatino, Georgia, serif",
+    "head": "\"Iowan Old Style\", \"Palatino Linotype\", Palatino, Georgia, serif",
+    "radius": "8px",
+    "card_r": "6px",
+    "head_ls": "0.03em",
+    "head_tt": "uppercase",
+    "h1_scale": "1.05",
+    "glass": "0.70"
+   },
    "on_a": "#ffffff",
    "c": [
     "#d5341e",
@@ -719,6 +1019,16 @@
    "b": "#ffd23f",
    "glow_a": "#4f86ff",
    "glow_b": "#ffd23f",
+   "style": {
+    "body": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "head": "\"SF Pro Rounded\", \"Avenir Next\", -apple-system, BlinkMacSystemFont, sans-serif",
+    "radius": "14px",
+    "card_r": "12px",
+    "head_ls": "-0.01em",
+    "head_tt": "none",
+    "h1_scale": "1.02",
+    "glass": "0.64"
+   },
    "on_a": "#111111",
    "c": [
     "#4f86ff",
@@ -740,6 +1050,16 @@
    "b": "#b18800",
    "glow_a": "#6998ff",
    "glow_b": "#ffd95c",
+   "style": {
+    "body": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "head": "\"SF Pro Rounded\", \"Avenir Next\", -apple-system, BlinkMacSystemFont, sans-serif",
+    "radius": "14px",
+    "card_r": "12px",
+    "head_ls": "-0.01em",
+    "head_tt": "none",
+    "h1_scale": "1.02",
+    "glass": "0.64"
+   },
    "on_a": "#ffffff",
    "c": [
     "#1e64ff",
@@ -756,7 +1076,7 @@
   "name": "Rolling Stone",
   "film": "Reacher",
   "dark": {
-   "bg": "#12110f",
+   "bg": "#11100e",
    "panel": "#23221f",
    "eff": "#1d1c19",
    "text": "#edebe8",
@@ -766,6 +1086,16 @@
    "b": "#7f93a3",
    "glow_a": "#c9a46a",
    "glow_b": "#7f93a3",
+   "style": {
+    "body": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "head": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "radius": "6px",
+    "card_r": "6px",
+    "head_ls": "0.02em",
+    "head_tt": "none",
+    "h1_scale": "1.02",
+    "glass": "0.76"
+   },
    "on_a": "#111111",
    "c": [
     "#c9a46a",
@@ -787,6 +1117,16 @@
    "b": "#7f93a3",
    "glow_a": "#d1b280",
    "glow_b": "#92a3b1",
+   "style": {
+    "body": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "head": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "radius": "6px",
+    "card_r": "6px",
+    "head_ls": "0.02em",
+    "head_tt": "none",
+    "h1_scale": "1.02",
+    "glass": "0.76"
+   },
    "on_a": "#ffffff",
    "c": [
     "#906d34",
@@ -813,6 +1153,16 @@
    "b": "#b9a2e6",
    "glow_a": "#f19bb6",
    "glow_b": "#b9a2e6",
+   "style": {
+    "body": "\"Iowan Old Style\", \"Palatino Linotype\", Palatino, Georgia, serif",
+    "head": "\"Iowan Old Style\", \"Palatino Linotype\", Palatino, Georgia, serif",
+    "radius": "12px",
+    "card_r": "8px",
+    "head_ls": "0.05em",
+    "head_tt": "uppercase",
+    "h1_scale": "1.04",
+    "glass": "0.72"
+   },
    "on_a": "#111111",
    "c": [
     "#f19bb6",
@@ -834,6 +1184,16 @@
    "b": "#9c7bdc",
    "glow_a": "#f3aac1",
    "glow_b": "#c3b0ea",
+   "style": {
+    "body": "\"Iowan Old Style\", \"Palatino Linotype\", Palatino, Georgia, serif",
+    "head": "\"Iowan Old Style\", \"Palatino Linotype\", Palatino, Georgia, serif",
+    "radius": "12px",
+    "card_r": "8px",
+    "head_ls": "0.05em",
+    "head_tt": "uppercase",
+    "h1_scale": "1.04",
+    "glass": "0.72"
+   },
    "on_a": "#ffffff",
    "c": [
     "#db1f5a",
@@ -860,6 +1220,16 @@
    "b": "#ff9ad5",
    "glow_a": "#ff3fa4",
    "glow_b": "#ff9ad5",
+   "style": {
+    "body": "\"SF Pro Rounded\", \"Avenir Next\", -apple-system, BlinkMacSystemFont, sans-serif",
+    "head": "\"SF Pro Rounded\", \"Avenir Next\", -apple-system, BlinkMacSystemFont, sans-serif",
+    "radius": "24px",
+    "card_r": "20px",
+    "head_ls": "-0.01em",
+    "head_tt": "none",
+    "h1_scale": "1.06",
+    "glass": "0.66"
+   },
    "on_a": "#111111",
    "c": [
     "#ff3fa4",
@@ -881,6 +1251,16 @@
    "b": "#ff3eaf",
    "glow_a": "#ff5cb2",
    "glow_b": "#ffa9db",
+   "style": {
+    "body": "\"SF Pro Rounded\", \"Avenir Next\", -apple-system, BlinkMacSystemFont, sans-serif",
+    "head": "\"SF Pro Rounded\", \"Avenir Next\", -apple-system, BlinkMacSystemFont, sans-serif",
+    "radius": "24px",
+    "card_r": "20px",
+    "head_ls": "-0.01em",
+    "head_tt": "none",
+    "h1_scale": "1.06",
+    "glass": "0.66"
+   },
    "on_a": "#ffffff",
    "c": [
     "#dc0074",
@@ -897,9 +1277,9 @@
   "name": "Nevermore",
   "film": "Wednesday",
   "dark": {
-   "bg": "#0a0a0b",
-   "panel": "#202022",
-   "eff": "#18181a",
+   "bg": "#09090b",
+   "panel": "#1f1f23",
+   "eff": "#17171b",
    "text": "#e8e8ed",
    "muted": "#ababba",
    "faint": "#75758a",
@@ -907,6 +1287,16 @@
    "b": "#e6e6e6",
    "glow_a": "#a98be0",
    "glow_b": "#e6e6e6",
+   "style": {
+    "body": "\"Iowan Old Style\", \"Palatino Linotype\", Palatino, Georgia, serif",
+    "head": "\"Iowan Old Style\", \"Palatino Linotype\", Palatino, Georgia, serif",
+    "radius": "6px",
+    "card_r": "4px",
+    "head_ls": "0.03em",
+    "head_tt": "none",
+    "h1_scale": "1.06",
+    "glass": "0.72"
+   },
    "on_a": "#111111",
    "c": [
     "#a98be0",
@@ -928,6 +1318,16 @@
    "b": "#909090",
    "glow_a": "#b69ce5",
    "glow_b": "#eaeaea",
+   "style": {
+    "body": "\"Iowan Old Style\", \"Palatino Linotype\", Palatino, Georgia, serif",
+    "head": "\"Iowan Old Style\", \"Palatino Linotype\", Palatino, Georgia, serif",
+    "radius": "6px",
+    "card_r": "4px",
+    "head_ls": "0.03em",
+    "head_tt": "none",
+    "h1_scale": "1.06",
+    "glass": "0.72"
+   },
    "on_a": "#ffffff",
    "c": [
     "#8256d2",
@@ -944,9 +1344,9 @@
   "name": "Glitter",
   "film": "Euphoria",
   "dark": {
-   "bg": "#120a1e",
-   "panel": "#1f172b",
-   "eff": "#1a1226",
+   "bg": "#11091e",
+   "panel": "#1f162c",
+   "eff": "#1a1127",
    "text": "#eae8ed",
    "muted": "#b1abba",
    "faint": "#7d758a",
@@ -954,6 +1354,16 @@
    "b": "#4de3ff",
    "glow_a": "#b45cff",
    "glow_b": "#4de3ff",
+   "style": {
+    "body": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "head": "\"SF Pro Rounded\", \"Avenir Next\", -apple-system, BlinkMacSystemFont, sans-serif",
+    "radius": "22px",
+    "card_r": "18px",
+    "head_ls": "-0.02em",
+    "head_tt": "none",
+    "h1_scale": "1.04",
+    "glass": "0.54"
+   },
    "on_a": "#111111",
    "c": [
     "#b45cff",
@@ -975,6 +1385,16 @@
    "b": "#009cb9",
    "glow_a": "#bf74ff",
    "glow_b": "#68e7ff",
+   "style": {
+    "body": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "head": "\"SF Pro Rounded\", \"Avenir Next\", -apple-system, BlinkMacSystemFont, sans-serif",
+    "radius": "22px",
+    "card_r": "18px",
+    "head_ls": "-0.02em",
+    "head_tt": "none",
+    "h1_scale": "1.04",
+    "glass": "0.54"
+   },
    "on_a": "#ffffff",
    "c": [
     "#a031ff",
@@ -991,16 +1411,26 @@
   "name": "Yes Chef",
   "film": "The Bear",
   "dark": {
-   "bg": "#0d1216",
-   "panel": "#1c2226",
-   "eff": "#171c20",
+   "bg": "#0c1116",
+   "panel": "#1b2127",
+   "eff": "#161b21",
    "text": "#e8ebed",
-   "muted": "#abb3ba",
-   "faint": "#75818a",
+   "muted": "#abb2ba",
+   "faint": "#757f8a",
    "a": "#4a90d9",
    "b": "#c8cfd6",
    "glow_a": "#4a90d9",
    "glow_b": "#c8cfd6",
+   "style": {
+    "body": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "head": "\"SF Mono\", ui-monospace, \"JetBrains Mono\", Menlo, Consolas, monospace",
+    "radius": "6px",
+    "card_r": "4px",
+    "head_ls": "0.04em",
+    "head_tt": "uppercase",
+    "h1_scale": "0.98",
+    "glass": "0.74"
+   },
    "on_a": "#111111",
    "c": [
     "#4a90d9",
@@ -1022,6 +1452,16 @@
    "b": "#8292a2",
    "glow_a": "#65a1df",
    "glow_b": "#d0d6dc",
+   "style": {
+    "body": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+    "head": "\"SF Mono\", ui-monospace, \"JetBrains Mono\", Menlo, Consolas, monospace",
+    "radius": "6px",
+    "card_r": "4px",
+    "head_ls": "0.04em",
+    "head_tt": "uppercase",
+    "h1_scale": "0.98",
+    "glass": "0.74"
+   },
    "on_a": "#ffffff",
    "c": [
     "#2974c3",
